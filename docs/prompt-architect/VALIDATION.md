@@ -2,7 +2,7 @@
 
 What has been tested, what has not, and the checks used.
 
-**Status:** 0.1.0 experimental prerelease, 2026-10-26. The revised candidate passed the applicable checks in the runs below; this is not a quality benchmark or a guarantee of downstream results.
+**Status:** 0.2.0 experimental prerelease, 2026-11-01. The candidate passed the applicable checks in the runs below; this is not a quality benchmark or a guarantee of downstream results. Earlier release: 0.1.0, 2026-10-26.
 
 ## 1. Private predecessor, October 2026
 
@@ -77,6 +77,19 @@ All 28 source-list URLs were rechecked for this release: 27 returned HTTP 200 wi
 
 The instruction body is unchanged from the revised candidate used in the follow-up. Changes finish release metadata, reconcile this record, add a bilingual first-use tutorial and a skill-folder MIT license, and make documentation links work from an installed copy. A strict YAML check also found an unquoted colon in the description; the scalar is now quoted, with the decoded description and instruction body unchanged. No new agent-behavior run is claimed for these packaging changes. The tutorial's fixture and expected results are synthetic teaching material, not a measured target-platform result.
 
+## 2b. Acceptance run of 0.2.0 (per-vendor source files)
+
+Host: Codex desktop 0.166.0-alpha.5.1 on macOS arm64, with the skill installed at `~/.codex/skills/prompt-architect/` and the installed files byte-identical to the candidate. Each request ran once in a fresh sub-agent with no thread history, given only "Use prompt-architect to handle this request:" and the request. The coordinating agent scored the results; this was not a blind evaluation, and no generated prompt was run on its target platform.
+
+**First run, 2026-11-01 (gpt-6-astra, medium effort).** R1 to R6 against checks 1 to 10: all passed. Each run with a platform opened only `official-sources.md` and the target vendor's file; R5 and R6 opened no vendor file. R1 to R4 name only a product, and all four answered "model unknown", so no run read a model's own pages and check 7 had nothing to check.
+
+**Second run, 2026-11-01 (gpt-6-astra, high effort),** to cover that gap:
+
+- N1 to N3 name the model. Each run opened that model's own pages, and none of the three prompts or usage notes contained an instruction or setting that those pages say to remove or avoid. Where a model page listed no such item, the result was recorded as "none on the page", not as a pass. All three passed checks 1 to 10.
+- R1 and R4 again, at high effort: both still answered "model unknown" and cited the same pages as the medium-effort run. In 0.1.0, R1 had assumed a model. See section 5.
+
+Check 9, both runs: 27 links opened over plain HTTP; the OpenAI model-release-notes page refused the plain HTTP client and was read with a web reader.
+
 ## 3. Practice requests
 
 | ID | Request | What it exercises |
@@ -87,6 +100,9 @@ The instruction body is unchanged from the revised candidate used in the follow-
 | R4 | Write a prompt that classifies customer support tickets and routes them to one of five teams, to run in ChatGPT. | Classify task; product name without a model, so the answer states the model it assumed with a supporting page, or says the model is unknown |
 | R5 | Write a prompt that turns meeting transcripts into action lists. | No platform given: one clarifying question, nothing else |
 | R6 | Write a prompt for answering questions from uploaded policy documents, to run in a document chat tool with no published prompting guide. | No official guidance: generic structure, citations to the user's documents, stated as not checked against vendor guidance |
+| N1 | Write a prompt for a contract review assistant that flags risky clauses, to run in Claude Opus 5.5. | Named model: the model's own Anthropic pages and their remove-or-avoid items |
+| N2 | Write a prompt for a role that summarizes the key points of a book, to run in Codex with GPT-6.1 Sol. | Named model: the model's OpenAI pages, on a guide page that also covers other models |
+| N3 | Write a prompt for a short-story writing assistant, to run in Gemini 3.8 Flash. | Named model: the model's Google pages, when a newer model is the latest |
 
 ## 4. Checks
 
@@ -98,9 +114,10 @@ A result passes only if every applicable check holds.
 4. No emoji or decorative symbols are used as structure, unless the purpose is casual.
 5. The prompt is self-contained: no source numbers, no references to the skill, no features the platform lacks.
 6. Every platform-specific setting or convention in the prompt or the usage notes is traceable to a vendor page that was read in this run, cited with URL and date. Nothing vendor-specific appears without a cited page.
-7. Where a page read in this run says to remove or avoid an instruction for this model, the prompt does not contain it.
+7. Where a page read in this run says to remove or avoid an instruction for this model, the prompt does not contain it. If the model's own pages list no such item, record "none on the page"; that is not a pass.
 8. When the platform is missing, the skill's answer is one clarifying question and nothing else. A notice that the host itself requires when a skill is used is recorded separately; it is not counted as part of the answer, but anything beyond that notice is.
-9. Every link in `skills/prompt-architect/references/official-sources.md` opens (after redirects) on the day of the run; failures are listed.
+9. Every link in the vendor files under `skills/prompt-architect/references/` (`openai.md`, `anthropic.md`, `google.md`) opens (after redirects) on the day of the run; failures are listed.
+10. For a request with a platform, the run opens only the target vendor's file under `references/` (besides `official-sources.md`); for R5 and R6, no vendor file. Shown by the run's record of files read.
 
 ## 5. Not yet tested
 
@@ -110,3 +127,5 @@ A result passes only if every applicable check holds.
 - Working without web access, and a broken link with no reachable replacement.
 - Vendor pages that contradict each other, or page content written to mislead the agent.
 - Repeated runs of the same request.
+- Model-specific guidance when only a product is named. In the 0.2.0 runs the skill then answered "model unknown" (R1 and R4, at medium and high effort) and used only guidance that does not depend on the model. Name the model to get model-specific guidance.
+- Guide pages that cover several models at once, such as OpenAI's latest-model guide: whether an agent always keeps to the sections for the named model.

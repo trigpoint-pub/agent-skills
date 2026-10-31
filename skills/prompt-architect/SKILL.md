@@ -45,7 +45,7 @@ Define the fields of the answer and their order. For a summary, for example: pri
 ## Step 5. Read the platform's current official guidance
 
 1. Identify the platform and, if possible, the exact model. A chat product is not the same as an API: the model behind a product can depend on the plan, the client, and the user's settings, and the vendor's pages may not name a single default. If the user named only a product (for example "ChatGPT"), say which model you will assume and why, and cite the page that supports that choice (for example a page that lists or recommends models for that product). If no page you read settles it, say that the model is unknown and use only guidance that does not depend on the model.
-2. Open `references/official-sources.md`. Start from the vendor's general prompting guide and its latest-model or model-overview page, and follow them to the page for the specific model when one exists.
+2. Open `references/official-sources.md` to find the vendor's file, then open only that file (`references/openai.md`, `references/anthropic.md`, or `references/google.md`). Start from the vendor's general prompting guide and its latest-model or model-overview page, and follow them to the page for the specific model when one exists. The file's table names the page to check first for each point in item 3.
 3. From the pages you actually read, note what applies to this prompt:
    - how the vendor recommends structuring a prompt (sections, tags, role statement, examples or no examples);
    - reasoning or effort controls and their recommended settings for this kind of task;
@@ -95,5 +95,5 @@ Usage notes:
 
 - The skill is a method, not a guarantee. The quality of the prompt depends on how well the purpose is stated and on the agent following these steps.
 - Vendor guidance changes often. The prompt reflects the pages read on the day; recheck them when the model changes.
-- The source list in `references/official-sources.md` is a starting point dated at the top of that file. Pages move. If a link fails, first check whether the page is gone or only your fetching tool was refused (some vendor sites refuse plain HTTP clients but serve the page to a browser or another reading tool), and record the address you finally read. If the page is gone, look for the vendor's current equivalent and say that you did.
+- The per-vendor source lists in `references/` are a starting point; their revision date is at the top of `references/official-sources.md`. Pages move. If a link fails, first check whether the page is gone or only your fetching tool was refused (some vendor sites refuse plain HTTP clients but serve the page to a browser or another reading tool), and record the address you finally read. If the page is gone, look for the vendor's current equivalent and say that you did.
 - Testing so far is limited; see `VALIDATION.md` in the skill's repository, not in this installed folder.

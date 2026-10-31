@@ -4,6 +4,13 @@ Each skill has its own versions and tags (`{skill}-v{version}`).
 
 ## prompt-architect
 
+### 0.2.0, 2026-11-01
+
+- The source list is split into one file per vendor (`references/openai.md`, `references/anthropic.md`, `references/google.md`). `references/official-sources.md` now says which file to open, and Step 5 opens only the target vendor's file. Each vendor file pairs the points Step 5 asks for with the page to check first. The skill still ships no vendor conventions.
+- Source list: the Claude "Adaptive thinking" entry now uses the page's current title and address, "Steering thinking"; the old address already redirected there. All 28 links rechecked on 2026-11-01.
+- The skill README and the first-use tutorial link to the method article; the tutorial no longer gives the NotebookLM tool's version number.
+- Validation: new check 10 (only the target vendor's file is opened), three named-model practice requests, and the 0.2.0 acceptance runs (section 2b).
+
 ### 0.1.0, tag `prompt-architect-v0.1.0`, 2026-10-26
 
 First public release, experimental, by Ansel under MIT. Includes the task-method workflow, first-party vendor source list, installation instructions, and a bilingual [first-use tutorial](docs/prompt-architect/FIRST-USE.md).
