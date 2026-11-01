@@ -37,7 +37,7 @@ Start with the strongest attack, then check the reasoning, sources read, evidenc
 
 ## Try it without installing
 
-1. Download the repository. For a fixed version, use the source archive on the [v0.1.0 release](https://github.com/anselbuilds/agent-skills/releases/tag/red-team-gate-v0.1.0). It contains the collection, not a standalone skill ZIP.
+1. Download the repository. For a fixed version, use the source archive on the [v0.1.0 release](https://github.com/trigpoint-pub/agent-skills/releases/tag/red-team-gate-v0.1.0). It contains the collection, not a standalone skill ZIP.
 2. Open the extracted repository folder in your agent. Keep `skills/red-team-gate/` intact.
 3. Start a new conversation if you have already opened the example report or answer key. Use this prompt:
 
@@ -100,7 +100,7 @@ Each review costs a full agent run. The predecessor trial took roughly 80,000 to
 
 Full method references and their verification limits are in [SOURCES.md](../../docs/red-team-gate/SOURCES.md). The [article snapshot](../../docs/red-team-gate/method.md) is licensed CC BY 4.0; the website is canonical. These documents and `VALIDATION.md` live under `docs/`, so their relative links work in the repository but not in a standalone installed copy.
 
-For questions or bugs, use the repository's [Issues](https://github.com/anselbuilds/agent-skills/issues). For private vulnerability reports, see [SECURITY.md](../../SECURITY.md). Maintained by Ansel, with no promised response time.
+For questions or bugs, use the repository's [Issues](https://github.com/trigpoint-pub/agent-skills/issues). For private vulnerability reports, see [SECURITY.md](../../SECURITY.md). Maintained by Ansel, with no promised response time.
 
 ---
 

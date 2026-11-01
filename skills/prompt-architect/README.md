@@ -5,7 +5,7 @@ An agent skill that writes a ready-to-paste prompt for a stated purpose on a sta
 It works in two layers. First it builds the task method: what kind of task this is, the steps the model should reason through, success criteria someone could check, and the fields of the answer. Then it reads the platform vendor's current official prompting documentation and writes the method in that platform's conventions. The usage notes cite the pages it read.
 
 > Version: 0.2.0 · Status: experimental prerelease · Maintainer: Ansel · License: [MIT](LICENSE)
-> [First-use tutorial / 最短教學](https://github.com/anselbuilds/agent-skills/blob/prompt-architect-v0.2.0/docs/prompt-architect/FIRST-USE.md) · Method article: [English](https://trigpoint.pub/methods/architect-a-prompt) · [繁體中文](https://trigpoint.pub/zh-Hant/methods/architect-a-prompt)
+> [First-use tutorial / 最短教學](https://github.com/trigpoint-pub/agent-skills/blob/prompt-architect-v0.2.0/docs/prompt-architect/FIRST-USE.md) · Method article: [English](https://trigpoint.pub/methods/architect-a-prompt) · [繁體中文](https://trigpoint.pub/zh-Hant/methods/architect-a-prompt)
 
 ## Why it reads the vendor's pages every time
 
@@ -24,7 +24,7 @@ Prompting advice goes out of date with each model release. A tip that helped one
 
 ## Install
 
-Start from the [v0.2.0 release](https://github.com/anselbuilds/agent-skills/releases/tag/prompt-architect-v0.2.0). The attached skill ZIP contains a `prompt-architect/` folder; the repository source archive contains `skills/prompt-architect/`. Copy that whole folder to the skill location your agent uses. The result must end in `prompt-architect/SKILL.md`, without a doubled folder.
+Start from the [v0.2.0 release](https://github.com/trigpoint-pub/agent-skills/releases/tag/prompt-architect-v0.2.0). The attached skill ZIP contains a `prompt-architect/` folder; the repository source archive contains `skills/prompt-architect/`. Copy that whole folder to the skill location your agent uses. The result must end in `prompt-architect/SKILL.md`, without a doubled folder.
 
 | Agent | Project folder | Personal folder |
 |---|---|---|
@@ -46,12 +46,12 @@ The answer has three parts: a one-line summary, the prompt itself (paste only th
 
 ## How well does it work?
 
-See [VALIDATION.md](https://github.com/anselbuilds/agent-skills/blob/prompt-architect-v0.2.0/docs/prompt-architect/VALIDATION.md) for what has been tested and what has not.
+See [VALIDATION.md](https://github.com/trigpoint-pub/agent-skills/blob/prompt-architect-v0.2.0/docs/prompt-architect/VALIDATION.md) for what has been tested and what has not.
 
 ## Sources
 
-Where the method comes from and how the vendor list is maintained: [SOURCES.md](https://github.com/anselbuilds/agent-skills/blob/prompt-architect-v0.2.0/docs/prompt-architect/SOURCES.md).
+Where the method comes from and how the vendor list is maintained: [SOURCES.md](https://github.com/trigpoint-pub/agent-skills/blob/prompt-architect-v0.2.0/docs/prompt-architect/SOURCES.md).
 
 The tutorial and evidence documents live under `docs/prompt-architect/` in the repository. The links above point to this release on GitHub, so they also work from an installed copy with web access. Only the skill folder is installed.
 
-Maintained by Ansel, with no promised response time. Use [Issues](https://github.com/anselbuilds/agent-skills/issues) for questions and reproducible problems; use [private vulnerability reporting](https://github.com/anselbuilds/agent-skills/security/advisories/new) for sensitive security reports.
+Maintained by Ansel, with no promised response time. Use [Issues](https://github.com/trigpoint-pub/agent-skills/issues) for questions and reproducible problems; use [private vulnerability reporting](https://github.com/trigpoint-pub/agent-skills/security/advisories/new) for sensitive security reports.

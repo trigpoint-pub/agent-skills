@@ -2,7 +2,7 @@
 
 Version 0.2.0 · experimental prerelease · Ansel · MIT
 
-[Skill and installation instructions](../../skills/prompt-architect/README.md) · [Release](https://github.com/anselbuilds/agent-skills/releases/tag/prompt-architect-v0.2.0) · [Validation](VALIDATION.md)
+[Skill and installation instructions](../../skills/prompt-architect/README.md) · [Release](https://github.com/trigpoint-pub/agent-skills/releases/tag/prompt-architect-v0.2.0) · [Validation](VALIDATION.md)
 
 ## English
 
@@ -51,7 +51,7 @@ These are hand-written expected results for a synthetic fixture, not an executio
 
 Replace the meeting task and ChatGPT with your purpose and target platform. Give constraints that matter: audience, input type, required fields, and what counts as success. Keep the generated prompt separate from the skill's usage notes. Check its result on a small example you can judge before relying on it.
 
-[Report a reproducible problem](https://github.com/anselbuilds/agent-skills/issues); use synthetic inputs and omit private meeting notes or credentials. Sensitive security reports go through [private vulnerability reporting](https://github.com/anselbuilds/agent-skills/security/advisories/new). There is no promised response time.
+[Report a reproducible problem](https://github.com/trigpoint-pub/agent-skills/issues); use synthetic inputs and omit private meeting notes or credentials. Sensitive security reports go through [private vulnerability reporting](https://github.com/trigpoint-pub/agent-skills/security/advisories/new). There is no promised response time.
 
 ## 繁體中文
 
@@ -98,7 +98,7 @@ Replace the meeting task and ChatGPT with your purpose and target platform. Give
 
 替換用途與平台，交代讀者、輸入種類、必要欄位及成功標準。只把生成的 prompt 貼到目標平台，另行保留使用說明及來源。先用你能判斷的小例子確認效果。
 
-遇到問題可開 [Issue](https://github.com/anselbuilds/agent-skills/issues)，附合成重現資料，不貼私人會議紀錄或憑證。敏感漏洞走 [私密回報](https://github.com/anselbuilds/agent-skills/security/advisories/new)，不承諾回覆時限。
+遇到問題可開 [Issue](https://github.com/trigpoint-pub/agent-skills/issues)，附合成重現資料，不貼私人會議紀錄或憑證。敏感漏洞走 [私密回報](https://github.com/trigpoint-pub/agent-skills/security/advisories/new)，不承諾回覆時限。
 
 ## Relationship to Trigpoint / 與 Trigpoint 的關係
 

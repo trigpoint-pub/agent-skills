@@ -1,6 +1,6 @@
 # Agent skills
 
-Agent skills by Ansel. Each folder under `skills/` installs on its own.
+Practical agent skills for [Trigpoint](https://trigpoint.pub) methods. Go from a method article to a tutorial, then try the corresponding skill. Created and maintained by Ansel. Each folder under `skills/` installs on its own.
 
 Skill folder names and the `name` field in `SKILL.md` are the technical identifiers. Display names describe the task; author and maintainer credits are listed separately.
 

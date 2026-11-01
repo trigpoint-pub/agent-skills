@@ -2,7 +2,7 @@
 
 Version 0.1.0 · experimental prerelease · Ansel · MIT
 
-[Skill README](../../skills/price-watch/README.md) · [Install and use](README.md#install-and-use) · [Registry commands](../../skills/price-watch/references/registry.md) · [Release](https://github.com/anselbuilds/agent-skills/releases/tag/price-watch-v0.1.0) · [Validation](VALIDATION.md)
+[Skill README](../../skills/price-watch/README.md) · [Install and use](README.md#install-and-use) · [Registry commands](../../skills/price-watch/references/registry.md) · [Release](https://github.com/trigpoint-pub/agent-skills/releases/tag/price-watch-v0.1.0) · [Validation](VALIDATION.md)
 
 ## English
 
@@ -33,7 +33,7 @@ Tested scope: the helper's 18 CLI and state tests pass on macOS arm64 with Pytho
 
 ### Part A. Rehearse every stage with a synthetic item
 
-Download the source code archive (zip) from the [release](https://github.com/anselbuilds/agent-skills/releases/tag/price-watch-v0.1.0), unzip it, and open a terminal in the extracted folder. Every command below passes `--db runtime/demo/watchlist.sqlite3`, so it writes only to a throwaway database in that folder, never to a registry you may already have. The item is a synthetic fixture on example.com, not a real product. Do not create a Safari watch from it.
+Download the source code archive (zip) from the [release](https://github.com/trigpoint-pub/agent-skills/releases/tag/price-watch-v0.1.0), unzip it, and open a terminal in the extracted folder. Every command below passes `--db runtime/demo/watchlist.sqlite3`, so it writes only to a throwaway database in that folder, never to a registry you may already have. The item is a synthetic fixture on example.com, not a real product. Do not create a Safari watch from it.
 
 **1. Prepare.**
 
@@ -117,7 +117,7 @@ You have finished Part B when you hold a setup card, an `active` record whose ev
 - Apple's documentation, checked on 2026-10-18, showed no Notify Me management API, and the skill does not read Safari's private data. If you need monitoring without Safari, this version cannot provide it.
 - The registry is plaintext SQLite. Keep it outside the skill folder and do not share runtime files, browser profiles or purchase plans.
 
-[Report a reproducible problem](https://github.com/anselbuilds/agent-skills/issues) with synthetic data; leave out real watch lists, account data and credentials. Sensitive security reports go through [private vulnerability reporting](https://github.com/anselbuilds/agent-skills/security/advisories/new). There is no promised response time.
+[Report a reproducible problem](https://github.com/trigpoint-pub/agent-skills/issues) with synthetic data; leave out real watch lists, account data and credentials. Sensitive security reports go through [private vulnerability reporting](https://github.com/trigpoint-pub/agent-skills/security/advisories/new). There is no promised response time.
 
 ## 繁體中文
 
@@ -148,7 +148,7 @@ price-watch 協助 agent 為單一指定商品準備 Safari Notify Me 監控，�
 
 ### A 部：用合成項目預演每個階段
 
-從 [Release](https://github.com/anselbuilds/agent-skills/releases/tag/price-watch-v0.1.0) 下載原始碼壓縮檔（zip）並解壓，在解壓後的資料夾開終端機。以下每條指令都帶 `--db runtime/demo/watchlist.sqlite3`，只寫入該資料夾內可丟棄的資料庫，不會寫進你可能已有的清單。項目是 example.com 上的合成資料，不是真實商品，不要拿它建立 Safari 監控。
+從 [Release](https://github.com/trigpoint-pub/agent-skills/releases/tag/price-watch-v0.1.0) 下載原始碼壓縮檔（zip）並解壓，在解壓後的資料夾開終端機。以下每條指令都帶 `--db runtime/demo/watchlist.sqlite3`，只寫入該資料夾內可丟棄的資料庫，不會寫進你可能已有的清單。項目是 example.com 上的合成資料，不是真實商品，不要拿它建立 Safari 監控。
 
 **1. 準備。**
 
@@ -217,4 +217,4 @@ python3 skills/price-watch/scripts/watchlist.py --db runtime/demo/watchlist.sqli
 - 2026-10-18 查閱的 Apple 文件未見 Notify Me 管理 API，skill 也不讀取 Safari 私有資料。需要不經 Safari 的監控時，本版無法提供。
 - 清單是明文 SQLite。放在 skill 資料夾外，不要分享 runtime 檔、瀏覽器設定檔或購買計畫。
 
-遇到可重現問題請開 [Issue](https://github.com/anselbuilds/agent-skills/issues)，附合成資料，不貼真實監控清單、帳戶資料或憑證。敏感漏洞走[私密回報](https://github.com/anselbuilds/agent-skills/security/advisories/new)，不承諾回覆時限。
+遇到可重現問題請開 [Issue](https://github.com/trigpoint-pub/agent-skills/issues)，附合成資料，不貼真實監控清單、帳戶資料或憑證。敏感漏洞走[私密回報](https://github.com/trigpoint-pub/agent-skills/security/advisories/new)，不承諾回覆時限。
