@@ -4,12 +4,12 @@ An agent skill for typed links between concept notes: `prereq`, `specializes` an
 
 It works in two directions. It proposes links from the text of a note, and it checks links a collection already has against a few rules, so that a reader can tell what a link means and a tool can draw or check the result. The vocabulary is deliberately small: it names the relations it leaves out, and a missing link never means two concepts are unrelated.
 
-> Version 0.1.0, experimental prerelease · Vocabulary v0.1 · Maintainer: Ansel · License: MIT
+> Version 0.1.0, experimental prerelease · Vocabulary v0.1 · Maintainer: Ansel · License: [MIT](LICENSE)
 
 ## What you get
 
 - A [skill](SKILL.md) with three link types and their test questions, rules across types, a procedure for proposing links from a note, a procedure for checking existing links, a storage format, a list of what a tool should compute, a worked example, and its limits.
-- The record of the one test so far in [VALIDATION.md](../../docs/concept-relations/VALIDATION.md).
+- The record of the one test so far in [VALIDATION.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/concept-relations/VALIDATION.md).
 
 ## What it does not do
 
@@ -78,10 +78,10 @@ One agreement test so far, run by AI agents only, with no human annotators:
 - A second run with Claude Sonnet, for reference only, gave `prereq` 0.697 (just under the bar), `specializes` 0.89 and `contrasts` 0.62.
 - One reference coder, one model family, and wide confidence intervals. One rule and one step of the procedure were reworded after the test and have not been re-tested.
 
-See [VALIDATION.md](../../docs/concept-relations/VALIDATION.md) for the setup, the intervals and the limits. This is not an accuracy figure.
+See [VALIDATION.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/concept-relations/VALIDATION.md) for the setup, the intervals and the limits. This is not an accuracy figure.
 
 ## Origin
 
-This vocabulary is a lagging public snapshot of the one the maintainer uses in their own concept library. The internal version is the reference and changes on its own schedule; this public version follows on its own release schedule, and every change is listed in the [changelog](../../CHANGELOG.md).
+This vocabulary is a lagging public snapshot of the one the maintainer uses in their own concept library. The internal version is the reference and changes on its own schedule; this public version follows on its own release schedule, and every change is listed in the [changelog](https://github.com/trigpoint-pub/agent-skills/blob/main/CHANGELOG.md).
 
-`VALIDATION.md` lives in the repository under `docs/concept-relations/`, not in this folder, so its links work on GitHub but not in an installed copy.
+`VALIDATION.md` lives in the repository under `docs/concept-relations/`, not in this folder, its GitHub links also work from an installed copy with web access.

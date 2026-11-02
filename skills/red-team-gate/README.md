@@ -4,7 +4,7 @@ AI assistants sometimes agree with users at the expense of correctness. Anthropi
 
 Red-Team Gate takes one claim, its support, and its intended use. It builds the strongest version, then gives it to a reviewer working in a fresh context to attempt a refutation. The report returns a verdict, the strongest attack, its evidence and reasoning, and what remains unknown. If the claim holds only under narrower conditions, it states that version. The decision stays with you.
 
-> Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: MIT
+> Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: [MIT](LICENSE)
 > Method article: [English](https://trigpoint.pub/methods/red-team-a-claim) · [繁體中文](https://trigpoint.pub/zh-Hant/methods/red-team-a-claim)
 
 [Try one practice claim](#try-it-without-installing) · [Read a report](#read-a-report) · [Review the test limits](#how-well-does-it-work)
@@ -60,7 +60,7 @@ If you cannot start a fresh reviewer, stop before the attack and give me
 the reviewer prompt to run in a separate conversation.
 ```
 
-Only after the review finishes, compare the verdict and evidence with the [answer key](../../docs/red-team-gate/VALIDATION.md#5-answer-key). Reproducing a known answer is a walkthrough, not a blind test. These instructions separate the review; they do not enforce a technical access restriction.
+Only after the review finishes, compare the verdict and evidence with the [answer key](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/red-team-gate/VALIDATION.md#5-answer-key). Reproducing a known answer is a walkthrough, not a blind test. These instructions separate the review; they do not enforce a technical access restriction.
 
 ## Install
 
@@ -89,7 +89,7 @@ Two small tests so far, neither an accuracy figure:
 - The private predecessor was tried on five claims. All three planted errors were refuted; neither true claim was refuted; none reached `survives`.
 - The first release candidate was tried on six practice claims on one host, including normative and framework claims. All six verdicts fell within the answer key; the true control P8 survived. Reviewers used the same model as the coordinating agent. The test was not blind, and wording revised afterward has not been re-run.
 
-Each review costs a full agent run. The predecessor trial took roughly 80,000 to 115,000 tokens and 3 to 7 minutes per review; the candidate run took 21 to 70 seconds, with token counts unavailable. These different setups are not a speed comparison or a cost estimate for the current package. See [VALIDATION.md](../../docs/red-team-gate/VALIDATION.md) for the setup, limits and untested paths.
+Each review costs a full agent run. The predecessor trial took roughly 80,000 to 115,000 tokens and 3 to 7 minutes per review; the candidate run took 21 to 70 seconds, with token counts unavailable. These different setups are not a speed comparison or a cost estimate for the current package. See [VALIDATION.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/red-team-gate/VALIDATION.md) for the setup, limits and untested paths.
 
 ## Sources and help
 
@@ -98,9 +98,9 @@ Each review costs a full agent run. The predecessor trial took roughly 80,000 to
 3. Gary Klein (2007), [Performing a Project Premortem](https://hbr.org/2007/09/performing-a-project-premortem). [Public full-text copy](https://lmscontent.embanet.com/USC/PPD554/Week10/PPD554_W10_HBR_Klein_Performaing_a_Project_Premortem.pdf).
 4. Deborah G. Mayo (2018), [Statistical Inference as Severe Testing](https://doi.org/10.1017/9781107286184). Her [Princeton talk abstract](https://psychology.princeton.edu/news-events/2023/deborah-g-mayo-%E2%80%94-professor-emerita-philosophy-virginia-tech) explains the severe-testing requirement.
 
-Full method references and their verification limits are in [SOURCES.md](../../docs/red-team-gate/SOURCES.md). The [article snapshot](../../docs/red-team-gate/method.md) is licensed CC BY 4.0; the website is canonical. These documents and `VALIDATION.md` live under `docs/`, so their relative links work in the repository but not in a standalone installed copy.
+Full method references and their verification limits are in [SOURCES.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/red-team-gate/SOURCES.md). The [article snapshot](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/red-team-gate/method.md) is licensed CC BY 4.0; the website is canonical. These documents and `VALIDATION.md` live under `docs/`, their GitHub links also work from an installed copy with web access.
 
-For questions or bugs, use the repository's [Issues](https://github.com/trigpoint-pub/agent-skills/issues). For private vulnerability reports, see [SECURITY.md](../../SECURITY.md). Maintained by Ansel, with no promised response time.
+For questions or bugs, use the repository's [Issues](https://github.com/trigpoint-pub/agent-skills/issues). For private vulnerability reports, see [SECURITY.md](https://github.com/trigpoint-pub/agent-skills/blob/main/SECURITY.md). Maintained by Ansel, with no promised response time.
 
 ---
 

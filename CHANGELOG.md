@@ -2,6 +2,14 @@
 
 Each skill has its own versions and tags (`{skill}-v{version}`).
 
+## Collection maintenance (unreleased)
+
+- Group the eight skills by task and link reading, practice, releases and evidence from the collection entry.
+- Point current Inspect and Price Watch installation guides at the collection; clarify source-archive layout and helper working directories.
+- Include the existing MIT license in all independently installable skill folders. Repository-only README links remain usable online after installation.
+- Integrate the existing helper-test workflow and one shared Issue form. The migrated per-repo templates remain historical records.
+- Document consistent packaging and evidence for future releases. Published tags, assets, skill instructions and recorded test outcomes are unchanged.
+
 ## allocate-ai-work
 
 ### Unreleased

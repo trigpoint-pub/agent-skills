@@ -4,10 +4,10 @@ An agent skill that sets how often, and how, a person checks the output of an AI
 
 It separates machine checks (run on every item) from human judgment checks (taken as a random sample), sets a starting rate from the step's track record and what an undetected error costs, states what a clean record does and does not prove, keeps the rate from sliding to zero, and keeps a miss log so that a missed error changes the check, not just the mood.
 
-> Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: MIT
-> Method article: [Calibrate how often you check AI output](https://trigpoint.pub/methods/calibrate-a-check) (a full-text snapshot is in [`docs/calibrate-ai-checks/method.md`](../../docs/calibrate-ai-checks/method.md), licensed CC BY 4.0)
+> Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: [MIT](LICENSE)
+> Method article: [Calibrate how often you check AI output](https://trigpoint.pub/methods/calibrate-a-check) (a full-text snapshot is in [`docs/calibrate-ai-checks/method.md`](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/calibrate-ai-checks/method.md), licensed CC BY 4.0)
 
-Part of a set of three: [`allocate-ai-work`](../allocate-ai-work/) (before handover), `calibrate-ai-checks` (while it runs), [`classify-ai-incident`](../classify-ai-incident/) (after something goes wrong). Each installs on its own.
+Part of a set of three: [`allocate-ai-work`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/allocate-ai-work) (before handover), `calibrate-ai-checks` (while it runs), [`classify-ai-incident`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/classify-ai-incident) (after something goes wrong). Each installs on its own.
 
 ## What you get
 
@@ -62,10 +62,10 @@ Two small tests so far, neither an accuracy figure:
 - Two checking steps from the author's own studio, compared with a month of its records: neither had a written rate or a count of units checked. The plans set rates and named the missing counts.
 - Two made-up steps, including one where the required checking was five times the time available: the plan worked through the options and left the lower rate to the owner. It is the [example](examples/example-check-plan.md).
 
-The coordinating agent wrote the accounts and compared the results, and runners and coordinator were the same model. See [VALIDATION.md](../../docs/calibrate-ai-checks/VALIDATION.md) for the setup and limits.
+The coordinating agent wrote the accounts and compared the results, and runners and coordinator were the same model. See [VALIDATION.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/calibrate-ai-checks/VALIDATION.md) for the setup and limits.
 
 ## Sources
 
-Trust calibration comes from Lee and See (2004); the slide in checking as automation proves reliable, and the weakness of instructions to verify, from Parasuraman and Manzey (2010); the limits of sustained watching from Mackworth (1948). The starting rates, floors and the 20-unit clean run are the studio's working defaults, and the cited research does not supply those numbers. Full references are in [SOURCES.md](../../docs/calibrate-ai-checks/SOURCES.md).
+Trust calibration comes from Lee and See (2004); the slide in checking as automation proves reliable, and the weakness of instructions to verify, from Parasuraman and Manzey (2010); the limits of sustained watching from Mackworth (1948). The starting rates, floors and the 20-unit clean run are the studio's working defaults, and the cited research does not supply those numbers. Full references are in [SOURCES.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/calibrate-ai-checks/SOURCES.md).
 
-`VALIDATION.md`, `SOURCES.md` and the method article snapshot live in the repository under `docs/calibrate-ai-checks/`, not in this folder, so their links work on GitHub but not in an installed copy.
+`VALIDATION.md`, `SOURCES.md` and the method article snapshot live in the repository under `docs/calibrate-ai-checks/`, not in this folder, their GitHub links also work from an installed copy with web access.

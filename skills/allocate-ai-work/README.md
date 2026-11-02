@@ -4,10 +4,10 @@ An agent skill that builds an allocation ledger for one workflow: for each step 
 
 It splits each step into four stages (gather, analyse, decide, act), sets a level for each stage from two questions (can an error here be undone? does it travel on before anyone notices?), and asks what work the person still has once the stage is handed over. Every row cites its basis in the human-automation research literature, with a verification status and a link. The ledger is a proposal; the workflow's owner decides.
 
-> Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: MIT
-> Method article: [Allocate a workflow before you hand it to AI](https://trigpoint.pub/methods/allocate-a-workflow) (a full-text snapshot is in [`docs/allocate-ai-work/method.md`](../../docs/allocate-ai-work/method.md), licensed CC BY 4.0)
+> Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: [MIT](LICENSE)
+> Method article: [Allocate a workflow before you hand it to AI](https://trigpoint.pub/methods/allocate-a-workflow) (a full-text snapshot is in [`docs/allocate-ai-work/method.md`](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/allocate-ai-work/method.md), licensed CC BY 4.0)
 
-Part of a set of three: `allocate-ai-work` (before handover), [`calibrate-ai-checks`](../calibrate-ai-checks/) (while it runs), [`classify-ai-incident`](../classify-ai-incident/) (after something goes wrong). Each installs on its own.
+Part of a set of three: `allocate-ai-work` (before handover), [`calibrate-ai-checks`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/calibrate-ai-checks) (while it runs), [`classify-ai-incident`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/classify-ai-incident) (after something goes wrong). Each installs on its own.
 
 ## What you get
 
@@ -64,10 +64,10 @@ Two small tests so far, neither an accuracy figure:
 - Three automated workflows from the author's own studio, already graded by the studio before this skill existed, reviewed blind: the release candidate's reading of today's levels matched the studio's records on 2 of 7. Three of the five differences come from how the definitions were applied; two sit near the boundary between levels.
 - One made-up workflow, designed from scratch: a complete ledger, shown in the [example](examples/example-ledger.md).
 
-The coordinating agent wrote the accounts and compared the results, and runners and coordinator were the same model. See [VALIDATION.md](../../docs/allocate-ai-work/VALIDATION.md) for the setup and limits.
+The coordinating agent wrote the accounts and compared the results, and runners and coordinator were the same model. See [VALIDATION.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/allocate-ai-work/VALIDATION.md) for the setup and limits.
 
 ## Sources
 
-The stages and levels come from Sheridan and Verplank (1978) and Parasuraman, Sheridan and Wickens (2000); the residual work question from Bainbridge (1983), Endsley and Kiris (1995) and Dekker and Woods (2002); the checks from Parasuraman and Manzey (2010), Mackworth (1948) and Lee and See (2004). The two-question rule and the five-level folding are the studio's own working rule. Full references and what was checked are in [SOURCES.md](../../docs/allocate-ai-work/SOURCES.md).
+The stages and levels come from Sheridan and Verplank (1978) and Parasuraman, Sheridan and Wickens (2000); the residual work question from Bainbridge (1983), Endsley and Kiris (1995) and Dekker and Woods (2002); the checks from Parasuraman and Manzey (2010), Mackworth (1948) and Lee and See (2004). The two-question rule and the five-level folding are the studio's own working rule. Full references and what was checked are in [SOURCES.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/allocate-ai-work/SOURCES.md).
 
-`VALIDATION.md`, `SOURCES.md` and the method article snapshot live in the repository under `docs/allocate-ai-work/`, not in this folder, so their links work on GitHub but not in an installed copy.
+`VALIDATION.md`, `SOURCES.md` and the method article snapshot live in the repository under `docs/allocate-ai-work/`, not in this folder, their GitHub links also work from an installed copy with web access.

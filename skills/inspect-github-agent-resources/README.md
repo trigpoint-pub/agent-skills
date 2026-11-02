@@ -4,7 +4,7 @@ Author: Ansel.
 
 Inspect GitHub agent resources for task fit, security risks, and version acceptance. The skill combines a bounded, source-based security review with practical guidance on usefulness, tradeoffs, and the next verification. It retains traceable versions, inspected surfaces, findings, and gaps. A dependency-free Node.js helper inventories an authorized local snapshot without running its code.
 
-**v0.1.0 trial release (prerelease).** Maintained by Ansel under [MIT](LICENSE). The [repository README](https://github.com/anselbuilds/inspect-github-agent-resources/tree/v0.1.0#readme) supplies installation and first-use instructions.
+**v0.1.0 trial release (prerelease).** Maintained by Ansel under [MIT](LICENSE). The [installation and first-use guide](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/inspect-github-agent-resources/README.md) supplies installation and first-use instructions.
 
 ## What to decide with it
 
@@ -36,7 +36,13 @@ The helper is not a semantic malware detector, vulnerability database, sandbox, 
 
 Compatibility floor: Node.js 20.0.0. Use a maintained Node.js LTS line such as the tested Node 24; Node 20 is end-of-life. No package installation, API key, or third-party Node dependency is needed for the helpers. Public review needs an agent with anonymous public web access; a local-only review can use supplied files and explicitly retain missing provenance/advisory evidence. Agent file reads may be sent to its model provider; the helper's local execution is not an offline guarantee for the agent.
 
-From this repository:
+From the collection repository root, first enter the skill folder (skip this step if already there):
+
+```sh
+cd skills/inspect-github-agent-resources
+```
+
+Then run:
 
 ```sh
 node --test scripts/tests/static-agent-resource-scan.test.mjs scripts/tests/compare-snapshots.test.mjs
@@ -46,7 +52,7 @@ node scripts/compare-snapshots.mjs --before /path/to/old-snapshot --after /path/
 
 The helpers print to stdout. To save a report, redirect outside the scanned directories; writing into an input would change the evidence being measured. Run only against stable snapshots that you are authorized to read. Do not invoke candidate scripts.
 
-To try the skill without installing it, give a supporting agent this repository's `SKILL.md` and a public repository URL. Persistent skill installation is a separate user action. Do not copy a preparation package's sibling private files into a skill directory or public repository.
+To try the skill without installing it, give a supporting agent `skills/inspect-github-agent-resources/SKILL.md` from the collection repository root and a public repository URL. Persistent skill installation is a separate user action. Do not copy a preparation package's sibling private files into a skill directory or public repository.
 
 ## Deliverable and maintenance
 

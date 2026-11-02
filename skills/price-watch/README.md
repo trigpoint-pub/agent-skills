@@ -11,11 +11,11 @@
 - `$price-watch 把目標價改成 8000，產生待同步的設定卡。`
 - `$price-watch 幫我在 Safari 完成設定並核對。`（需宿主提供 Computer Use）
 
-操作本機程式：
+從合集根目錄先進入 `skills/price-watch/`，再操作本機程式。以下使用獨立示例資料庫：
 
 ```sh
-python3 scripts/watchlist.py list
-python3 scripts/watchlist.py handoff <watch-id>
+python3 scripts/watchlist.py --db /path/to/demo/watchlist.sqlite3 list
+python3 scripts/watchlist.py --db /path/to/demo/watchlist.sqlite3 handoff <watch-id>
 ```
 
 新增資料的 JSON 格式和完整命令見 `references/registry.md`。價格與時間的例子是合成資料，不能直接當正式監控。
@@ -26,6 +26,6 @@ python3 scripts/watchlist.py handoff <watch-id>
 
 此包只含 skill、程式及文件，不含作者的商品監控、帳戶資料或瀏覽器設定。現行版本沒有 Safari 無介面管理 API 整合、獨立抓價服務或通知後端。公開分享程式不會分享或啟用接收者的 Safari 監控。
 
-個人安裝在 ~/.agents/skills/price-watch 時請明定 PRICE_WATCH_DB 或 --db；程式把 .agents/skills 視為專案布局。CLI 初次查詢也會初始化 DB。完整雙語安裝與合成示例見發布 repo 根目錄 README。
+個人安裝在 ~/.agents/skills/price-watch 時請明定 PRICE_WATCH_DB 或 --db；程式把 .agents/skills 視為專案布局。CLI 初次查詢也會初始化 DB。完整雙語安裝與合成示例見下方合集教學。
 
-Experimental v0.1.0，Ansel 署名與維護，採 [MIT](LICENSE)。完整[安裝及首次使用](https://github.com/anselbuilds/safari-price-watch/tree/v0.1.0#install-and-use)。一般問題用 [Issues](https://github.com/trigpoint-pub/agent-skills/issues)，敏感漏洞用[私密回報](https://github.com/trigpoint-pub/agent-skills/security/advisories/new)，不承諾回覆時限。
+Experimental v0.1.0，Ansel 署名與維護，採 [MIT](LICENSE)。完整[安裝及首次使用](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/price-watch/README.zh-Hant.md#安裝與實際使用)（[English](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/price-watch/README.md#install-and-use)）。一般問題用 [Issues](https://github.com/trigpoint-pub/agent-skills/issues)，敏感漏洞用[私密回報](https://github.com/trigpoint-pub/agent-skills/security/advisories/new)，不承諾回覆時限。

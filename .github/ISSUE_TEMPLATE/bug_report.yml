@@ -1,0 +1,59 @@
+name: Skill problem
+description: Report a reproducible problem with one skill.
+title: "skills/REPLACE-WITH-SKILL: describe the problem"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Replace REPLACE-WITH-SKILL in the title with the folder name selected below.
+        Use synthetic examples. Never include credentials, private notes, browser profiles or personal watchlists.
+        For sensitive vulnerabilities, use the private security link in the template chooser.
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options:
+        - allocate-ai-work
+        - calibrate-ai-checks
+        - classify-ai-incident
+        - concept-relations
+        - inspect-github-agent-resources
+        - price-watch
+        - prompt-architect
+        - red-team-gate
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "For example: prompt-architect-v0.2.0, or a main commit SHA"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Host and environment
+      description: Agent, OS, installation location type, and Node/Python version if relevant. Omit personal paths.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps and synthetic input
+      description: Include the command or prompt and the smallest non-sensitive example.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed result
+      description: Include only redacted output needed to understand the problem.
+    validations:
+      required: true

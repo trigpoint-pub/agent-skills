@@ -6,7 +6,9 @@ Prepare price-watch conditions, keep a local registry and generate a setup card 
 
 **Experimental v0.1.0 prerelease.** Created and maintained by Ansel under [MIT](../../LICENSE).
 
-[Download v0.1.0](https://github.com/anselbuilds/safari-price-watch/archive/refs/tags/v0.1.0.zip) · [Release notes](https://github.com/anselbuilds/safari-price-watch/releases/tag/v0.1.0) · [Install and use](#install-and-use)
+[Download v0.1.0](https://github.com/trigpoint-pub/agent-skills/archive/refs/tags/price-watch-v0.1.0.zip) · [Release notes](https://github.com/trigpoint-pub/agent-skills/releases/tag/price-watch-v0.1.0) · [Install and use](#install-and-use)
+
+The source ZIP contains the collection at this skill's release tag. Extract it and install only `skills/price-watch/`. Current guides are maintained here; archived repositories and tags remain historical records.
 
 ## Requirements
 

@@ -1,12 +1,14 @@
 # Safari 價格監控
 
-[English](https://github.com/anselbuilds/safari-price-watch/blob/408477fed8ee2b00af4759da69b4c7b90b00d2d2/README.md)
+[English](README.md)
 
 準備監控條件、維護本機清單，並產生 Safari Notify Me 設定卡。Safari 負責背景檢查與通知；Python 程式只記錄條件、核對證據及歷史，不抓價、不排程、不發通知，也不直接操作 Safari。
 
 **Experimental v0.1.0 prerelease。** Ansel 署名與維護，採 [MIT](../../LICENSE)。
 
-[下載 v0.1.0](https://github.com/anselbuilds/safari-price-watch/archive/refs/tags/v0.1.0.zip) · [版本說明](https://github.com/anselbuilds/safari-price-watch/releases/tag/v0.1.0) · [安裝與實際使用](#安裝與實際使用)
+[下載 v0.1.0](https://github.com/trigpoint-pub/agent-skills/archive/refs/tags/price-watch-v0.1.0.zip) · [版本說明](https://github.com/trigpoint-pub/agent-skills/releases/tag/price-watch-v0.1.0) · [安裝與實際使用](#安裝與實際使用)
+
+來源 ZIP 包含此 skill 發布 tag 當時的合集。解壓後只安裝 `skills/price-watch/`；舊封存 repo 及 tags 保留作歷史記錄。
 
 ## 環境
 

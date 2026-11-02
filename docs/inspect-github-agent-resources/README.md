@@ -4,7 +4,9 @@ Review a skill, plugin, MCP server, or agent template before adopting it or acce
 
 **v0.1.0 trial release (prerelease).** Created and maintained by Ansel, under the [MIT license](../../LICENSE).
 
-[Download v0.1.0](https://github.com/anselbuilds/inspect-github-agent-resources/archive/refs/tags/v0.1.0.zip) · [Release notes](https://github.com/anselbuilds/inspect-github-agent-resources/releases/tag/v0.1.0) · [Installation](#install-the-skill)
+[Download v0.1.0](https://github.com/trigpoint-pub/agent-skills/archive/refs/tags/inspect-github-agent-resources-v0.1.0.zip) · [Release notes](https://github.com/trigpoint-pub/agent-skills/releases/tag/inspect-github-agent-resources-v0.1.0) · [Installation](#install-the-skill)
+
+The source ZIP contains the collection at this skill's release tag. Extract it and install only `skills/inspect-github-agent-resources/`. Current guides are maintained here; archived repositories and tags remain historical records.
 
 ## What you get
 
@@ -22,7 +24,7 @@ The workflow needs an agent that can read the skill folder and source files. Pub
 
 ## Try it without installation
 
-1. Download and extract the [v0.1.0 repository ZIP](https://github.com/anselbuilds/inspect-github-agent-resources/archive/refs/tags/v0.1.0.zip) into a working directory. Keep `skills/inspect-github-agent-resources/` intact, including its references and scripts.
+1. Download and extract the [v0.1.0 repository ZIP](https://github.com/trigpoint-pub/agent-skills/archive/refs/tags/inspect-github-agent-resources-v0.1.0.zip) into a working directory. Keep `skills/inspect-github-agent-resources/` intact, including its references and scripts.
 2. Open that directory in an agent with file-reading capability.
 3. Give it this prompt, replacing `<repo>` with the extracted directory:
 
