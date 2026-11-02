@@ -15,7 +15,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        # Python 3.9 has no setup-python build for Ubuntu 26.04.
+        os: [macos-latest, ubuntu-24.04]
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
