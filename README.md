@@ -11,6 +11,9 @@ Skill folder names and the `name` field in `SKILL.md` are the technical identifi
 | [price-watch](skills/price-watch/) | Keeps a local price-watch registry, setup cards and verified state for Safari Notify Me. No scraper, scheduler or notification backend. [First-use tutorial](docs/price-watch/FIRST-USE.md). | 0.1.0 | experimental prerelease | macOS arm64 CLI tests; host-native discovery untested |
 | [prompt-architect](skills/prompt-architect/) | Builds a task method, reads current vendor guidance, and writes a ready-to-paste prompt. [First-use tutorial](docs/prompt-architect/FIRST-USE.md). | 0.1.0 | experimental prerelease | Codex on macOS; Claude Code by explicit file path only |
 | [concept-relations](skills/concept-relations/) | Typed links between concept notes (prereq, specializes, contrasts), each with a test question and a one-sentence reason. Proposes links from a note or checks existing ones. | 0.1.0 | experimental prerelease | Codex on macOS |
+| [allocate-ai-work](skills/allocate-ai-work/) | Builds an allocation ledger for one workflow: how far each stage is handed to AI, why, what is left for the person, and who takes over. | 0.1.0 | experimental prerelease | Codex on macOS |
+| [calibrate-ai-checks](skills/calibrate-ai-checks/) | Sets how often a person checks an AI step's output, from its track record and error cost, and keeps a miss log. | 0.1.0 | experimental prerelease | Codex on macOS |
+| [classify-ai-incident](skills/classify-ai-incident/) | Classifies one AI incident as use, misuse, disuse or abuse, and points the fix at a mechanism. | 0.1.0 | experimental prerelease | Codex on macOS |
 
 "Verified on" states the tested scope for each skill. Helper or CLI tests do not establish host-native installation or discovery. See each skill's validation record under `docs/`.
 

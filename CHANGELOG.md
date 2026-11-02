@@ -2,6 +2,24 @@
 
 Each skill has its own versions and tags (`{skill}-v{version}`).
 
+## allocate-ai-work
+
+### 0.1.0, tag `allocate-ai-work-v0.1.0`, 2026-11-02
+
+First public release, experimental. See `docs/allocate-ai-work/VALIDATION.md` for what was and was not tested.
+
+## calibrate-ai-checks
+
+### 0.1.0, tag `calibrate-ai-checks-v0.1.0`, 2026-11-02
+
+First public release, experimental. See `docs/calibrate-ai-checks/VALIDATION.md` for what was and was not tested.
+
+## classify-ai-incident
+
+### 0.1.0, tag `classify-ai-incident-v0.1.0`, 2026-11-02
+
+First public release, experimental. See `docs/classify-ai-incident/VALIDATION.md` for what was and was not tested.
+
 ## prompt-architect
 
 ### 0.2.0, 2026-11-01
