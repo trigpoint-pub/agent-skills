@@ -79,7 +79,7 @@ Before handing one concrete workflow (3 to 12 steps) to AI, or when reviewing on
 
 ## Get the skill
 
-The skill, its research index and the example ledger are on GitHub: [github.com/anselbuilds/agent-skills](https://github.com/anselbuilds/agent-skills) (`skills/allocate-ai-work/`). Two more belong to the same set: `calibrate-ai-checks`, for how often to check a step while it runs, and `classify-ai-incident`, for after something goes wrong. Each installs on its own.
+The skill, its research index and the example ledger are on GitHub: [github.com/trigpoint-pub/agent-skills](https://github.com/trigpoint-pub/agent-skills) (`skills/allocate-ai-work/`). Two more belong to the same set: `calibrate-ai-checks`, for how often to check a step while it runs, and `classify-ai-incident`, for after something goes wrong. Each installs on its own.
 
 ## References
 

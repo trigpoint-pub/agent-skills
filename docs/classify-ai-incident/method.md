@@ -76,7 +76,7 @@ When an AI-assisted or automated step produced a bad outcome, a near miss, or a 
 
 ## Get the skill
 
-The skill, its research index and the practice incidents are on GitHub: [github.com/anselbuilds/agent-skills](https://github.com/anselbuilds/agent-skills) (`skills/classify-ai-incident/`); their answer key is in `docs/classify-ai-incident/VALIDATION.md`. The set also has `allocate-ai-work` (before handover) and `calibrate-ai-checks` (while it runs). Each installs on its own.
+The skill, its research index and the practice incidents are on GitHub: [github.com/trigpoint-pub/agent-skills](https://github.com/trigpoint-pub/agent-skills) (`skills/classify-ai-incident/`); their answer key is in `docs/classify-ai-incident/VALIDATION.md`. The set also has `allocate-ai-work` (before handover) and `calibrate-ai-checks` (while it runs). Each installs on its own.
 
 ## References
 

@@ -8,6 +8,7 @@ Each skill has its own versions and tags (`{skill}-v{version}`).
 - Point current Inspect and Price Watch installation guides at the collection; clarify source-archive layout and helper working directories.
 - Include the existing MIT license in all independently installable skill folders. Repository-only README links remain usable online after installation.
 - Integrate the existing helper-test workflow and one shared Issue form. The migrated per-repo templates remain historical records.
+- The repository moved to the `trigpoint-pub` organization. Issue, security-report, release and tutorial links in the skill folders, guides and validation records now use `github.com/trigpoint-pub/agent-skills`; old `anselbuilds/agent-skills` addresses redirect. Entries below keep the addresses that were current when they were written.
 - Document consistent packaging and evidence for future releases. Published tags, assets, skill instructions and recorded test outcomes are unchanged.
 
 ## allocate-ai-work
@@ -15,6 +16,7 @@ Each skill has its own versions and tags (`{skill}-v{version}`).
 ### Unreleased
 
 - Validation record: the status line now reads "0.1.0 experimental prerelease, 2026-11-02" instead of "release candidate, not yet released". No test result changed.
+- Method snapshot (`docs/allocate-ai-work/method.md`): the GitHub link now reads `github.com/trigpoint-pub/agent-skills`, as on the article page. No other text changed.
 - The skill's instructions and the `allocate-ai-work-v0.1.0` release are unchanged.
 
 ### 0.1.0, tag `allocate-ai-work-v0.1.0`, 2026-11-02
@@ -26,6 +28,7 @@ First public release, experimental. See `docs/allocate-ai-work/VALIDATION.md` fo
 ### Unreleased
 
 - Validation record: the status line now reads "0.1.0 experimental prerelease, 2026-11-02" instead of "release candidate, not yet released". No test result changed.
+- Method snapshot (`docs/calibrate-ai-checks/method.md`): the GitHub link now reads `github.com/trigpoint-pub/agent-skills`, as on the article page. No other text changed.
 - The skill's instructions and the `calibrate-ai-checks-v0.1.0` release are unchanged.
 
 ### 0.1.0, tag `calibrate-ai-checks-v0.1.0`, 2026-11-02
@@ -37,6 +40,7 @@ First public release, experimental. See `docs/calibrate-ai-checks/VALIDATION.md`
 ### Unreleased
 
 - Validation record: the status line now reads "0.1.0 experimental prerelease, 2026-11-02" instead of "release candidate, not yet released". No test result changed.
+- Method snapshot (`docs/classify-ai-incident/method.md`): the GitHub link now reads `github.com/trigpoint-pub/agent-skills`, as on the article page. No other text changed.
 - The skill's instructions and the `classify-ai-incident-v0.1.0` release are unchanged.
 
 ### 0.1.0, tag `classify-ai-incident-v0.1.0`, 2026-11-02
@@ -65,6 +69,12 @@ Codex installation and discovery, revised practice cases and a naturally refused
 First public release, experimental. Vocabulary v0.1. See `docs/concept-relations/VALIDATION.md` for what was and was not tested.
 
 ## red-team-gate
+
+### Unreleased
+
+- The skill README is reorganized: when the skill fits, why the review is kept separate, how to read a report, and a practice prompt that keeps the example report and answer key out of view until the review is finished. It links the method article in English and Traditional Chinese.
+- Validation record: the status line now records the 0.1.0 publication on 2026-10-24 and says the acceptance results describe the release candidate, not a new test of the released package. No test result changed.
+- The skill's instructions and the `red-team-gate-v0.1.0` release are unchanged.
 
 ### 0.1.0, tag `red-team-gate-v0.1.0`, 2026-10-24
 
@@ -102,6 +112,11 @@ Content/path changes:
 - `skills/inspect-github-agent-resources/SECURITY.md`: `https://github.com/anselbuilds/inspect-github-agent-resources/security/advisories/new` -> `https://github.com/anselbuilds/agent-skills/security/advisories/new` (1 occurrence(s)).
 
 ## price-watch
+
+### Unreleased
+
+- Added a bilingual first-use tutorial, [`docs/price-watch/FIRST-USE.md`](docs/price-watch/FIRST-USE.md).
+- The skill's instructions, helper scripts and the `price-watch-v0.1.0` release are unchanged.
 
 ### 0.1.0, tag `price-watch-v0.1.0`, 2026-10-24
 

@@ -66,7 +66,7 @@ When an AI step drafts, extracts, classifies or acts and a person is supposed to
 
 ## Get the skill
 
-The skill, its research index and an example plan are on GitHub: [github.com/anselbuilds/agent-skills](https://github.com/anselbuilds/agent-skills) (`skills/calibrate-ai-checks/`). The set also has `allocate-ai-work` (before handover) and `classify-ai-incident` (after something goes wrong). Each installs on its own.
+The skill, its research index and an example plan are on GitHub: [github.com/trigpoint-pub/agent-skills](https://github.com/trigpoint-pub/agent-skills) (`skills/calibrate-ai-checks/`). The set also has `allocate-ai-work` (before handover) and `classify-ai-incident` (after something goes wrong). Each installs on its own.
 
 ## References
 
