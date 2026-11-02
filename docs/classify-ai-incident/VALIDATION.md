@@ -2,7 +2,7 @@
 
 What has been tested, what has not, and the answer key for the practice incidents.
 
-**Status:** release candidate, not yet released. Tests so far are small and were run by the author's studio, on two agent hosts. None is an accuracy figure.
+**Status:** 0.1.0 experimental prerelease, 2026-11-02. Tests so far are small and were run by the author's studio, on two agent hosts. None is an accuracy figure.
 
 ## 1. Tests so far
 

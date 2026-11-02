@@ -4,17 +4,32 @@ Each skill has its own versions and tags (`{skill}-v{version}`).
 
 ## allocate-ai-work
 
+### Unreleased
+
+- Validation record: the status line now reads "0.1.0 experimental prerelease, 2026-11-02" instead of "release candidate, not yet released". No test result changed.
+- The skill's instructions and the `allocate-ai-work-v0.1.0` release are unchanged.
+
 ### 0.1.0, tag `allocate-ai-work-v0.1.0`, 2026-11-02
 
 First public release, experimental. See `docs/allocate-ai-work/VALIDATION.md` for what was and was not tested.
 
 ## calibrate-ai-checks
 
+### Unreleased
+
+- Validation record: the status line now reads "0.1.0 experimental prerelease, 2026-11-02" instead of "release candidate, not yet released". No test result changed.
+- The skill's instructions and the `calibrate-ai-checks-v0.1.0` release are unchanged.
+
 ### 0.1.0, tag `calibrate-ai-checks-v0.1.0`, 2026-11-02
 
 First public release, experimental. See `docs/calibrate-ai-checks/VALIDATION.md` for what was and was not tested.
 
 ## classify-ai-incident
+
+### Unreleased
+
+- Validation record: the status line now reads "0.1.0 experimental prerelease, 2026-11-02" instead of "release candidate, not yet released". No test result changed.
+- The skill's instructions and the `classify-ai-incident-v0.1.0` release are unchanged.
 
 ### 0.1.0, tag `classify-ai-incident-v0.1.0`, 2026-11-02
 

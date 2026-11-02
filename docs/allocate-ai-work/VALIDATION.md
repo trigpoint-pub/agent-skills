@@ -2,7 +2,7 @@
 
 What has been tested and what has not.
 
-**Status:** release candidate, not yet released. Tests so far are small and were run on the author's own studio workflows. None is an accuracy figure.
+**Status:** 0.1.0 experimental prerelease, 2026-11-02. Tests so far are small and were run on the author's own studio workflows. None is an accuracy figure.
 
 ## 1. Tests so far
 
