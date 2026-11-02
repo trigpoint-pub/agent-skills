@@ -84,4 +84,4 @@ See [VALIDATION.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs
 
 This vocabulary is a lagging public snapshot of the one the maintainer uses in their own concept library. The internal version is the reference and changes on its own schedule; this public version follows on its own release schedule, and every change is listed in the [changelog](https://github.com/trigpoint-pub/agent-skills/blob/main/CHANGELOG.md).
 
-`VALIDATION.md` lives in the repository under `docs/concept-relations/`, not in this folder, its GitHub links also work from an installed copy with web access.
+`VALIDATION.md` lives in the repository under `docs/concept-relations/`, not in this folder. Its GitHub links also work from an installed copy with web access.

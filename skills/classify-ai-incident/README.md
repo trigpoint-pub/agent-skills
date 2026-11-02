@@ -68,4 +68,4 @@ The coordinating agent wrote the incidents and scored the results, and runners a
 
 The four categories are from Parasuraman and Riley (1997); who holds the switch between levels is from Miller and Parasuraman (2007); trust calibration from Lee and See (2004); attention-based failures from Parasuraman and Manzey (2010). The abuse checklist and the fix table are the studio's own working choices. Full references are in [SOURCES.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/classify-ai-incident/SOURCES.md).
 
-`VALIDATION.md`, `SOURCES.md` and the method article snapshot live in the repository under `docs/classify-ai-incident/`, not in this folder, their GitHub links also work from an installed copy with web access.
+`VALIDATION.md`, `SOURCES.md` and the method article snapshot live in the repository under `docs/classify-ai-incident/`, not in this folder. Their GitHub links also work from an installed copy with web access.

@@ -68,4 +68,4 @@ The coordinating agent wrote the accounts and compared the results, and runners 
 
 Trust calibration comes from Lee and See (2004); the slide in checking as automation proves reliable, and the weakness of instructions to verify, from Parasuraman and Manzey (2010); the limits of sustained watching from Mackworth (1948). The starting rates, floors and the 20-unit clean run are the studio's working defaults, and the cited research does not supply those numbers. Full references are in [SOURCES.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/calibrate-ai-checks/SOURCES.md).
 
-`VALIDATION.md`, `SOURCES.md` and the method article snapshot live in the repository under `docs/calibrate-ai-checks/`, not in this folder, their GitHub links also work from an installed copy with web access.
+`VALIDATION.md`, `SOURCES.md` and the method article snapshot live in the repository under `docs/calibrate-ai-checks/`, not in this folder. Their GitHub links also work from an installed copy with web access.
