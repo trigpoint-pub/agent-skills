@@ -437,6 +437,12 @@ export function scanRoot(rootInput, requestedLimits = {}) {
       const base = path.basename(target);
       if (IGNORED_DIRECTORIES.has(base)) {
         coverage.ignoredDirectories.push(relativeSafe);
+        // Only the snapshot's own top-level .git is checkout metadata. Any other excluded
+        // directory can hold code the resource loads or runs (dependencies, virtual
+        // environments, bytecode, nested repositories), so leaving it unread is a coverage gap.
+        if (!(base === '.git' && path.dirname(target) === root)) {
+          coverage.stopReasons.push(`excluded-directory:${relativeSafe}`);
+        }
         return;
       }
       let entries;
@@ -622,6 +628,13 @@ export function main(argv = process.argv.slice(2), io = { write: (value) => proc
   }
 }
 
-const invokedPath = process.argv[1] ? path.basename(process.argv[1]) : '';
-const modulePath = path.basename(new URL(import.meta.url).pathname);
-if (invokedPath === modulePath) process.exitCode = main();
+// Compare real paths so the CLI also runs through a symlinked install or a linked temp dir.
+function invokedDirectly() {
+  if (!process.argv[1]) return false;
+  try {
+    return fs.realpathSync.native(process.argv[1]) === fs.realpathSync.native(new URL(import.meta.url));
+  } catch {
+    return false;
+  }
+}
+if (invokedDirectly()) process.exitCode = main();

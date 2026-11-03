@@ -34,9 +34,23 @@ def require(ok, message):
     if not ok:
         raise ValueError(message)
 
+# Python 3.11 widened datetime.fromisoformat. Rewrite the common wider spellings
+# (basic format, +HHMM offsets, fractions of any length) into the extended form that
+# Python 3.9 also parses, so every supported Python accepts the same records.
+BASIC_DATETIME = re.compile(r'^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})?(?=[.,+\-]|$)')
+COMPACT_OFFSET = re.compile(r'([+-]\d{2})(\d{2})$')
+FRACTION = re.compile(r'[.,](\d+)(?=[+-]\d{2}:\d{2}$)')
+
 def timestamp(value):
     require(isinstance(value, str), 'Timestamp must be an ISO 8601 string')
-    parsed = datetime.fromisoformat(value.replace('Z', '+00:00'))
+    text = value.replace('Z', '+00:00')
+    text = BASIC_DATETIME.sub(lambda m: f'{m[1]}-{m[2]}-{m[3]}T{m[4]}:{m[5]}' + (f':{m[6]}' if m[6] else ''), text)
+    text = COMPACT_OFFSET.sub(r'\1:\2', text)
+    text = FRACTION.sub(lambda m: '.' + m[1][:6].ljust(6, '0'), text)
+    try:
+        parsed = datetime.fromisoformat(text)
+    except ValueError:
+        raise ValueError(f'Invalid isoformat string: {value!r}') from None
     require(parsed.tzinfo is not None, 'Timestamp requires timezone')
     return parsed
 
@@ -64,12 +78,15 @@ def validate(c):
     require(c['price_basis'] in ('listed','all_in'), 'price_basis must be listed or all_in')
     require(c['stock_rule'] in ('in_stock','any'), 'stock_rule must be in_stock or any')
     ZoneInfo(c['timezone'])
+    # Store timestamps in canonical extended form so older Pythons can read every record.
     if c['expires_at'] is not None:
-        timestamp(c['expires_at'])
+        c['expires_at'] = timestamp(c['expires_at']).isoformat()
     b = c['baseline']
     require(isinstance(b, dict) and set(b) == {'price','observed_at','stock','evidence'}, 'Invalid baseline fields')
     b['price'] = money(b['price'])
-    require(timestamp(b['observed_at']) <= datetime.now(timezone.utc), 'Baseline cannot be in the future')
+    observed = timestamp(b['observed_at'])
+    require(observed <= datetime.now(timezone.utc), 'Baseline cannot be in the future')
+    b['observed_at'] = observed.isoformat()
     require(b['stock'] in ('in_stock','out_of_stock','unknown'), 'Invalid stock state')
     require(isinstance(b['evidence'], str) and bool(b['evidence'].strip()), 'Baseline requires observed evidence')
     return c

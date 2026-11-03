@@ -84,7 +84,12 @@ First public release, experimental. Tested on Codex on macOS; see `docs/red-team
 
 ### Unreleased
 
-Standardized the display name and documentation titles as **GitHub Agent Resource Review**. Author and maintainer attribution remains Ansel. The `inspect-github-agent-resources` identifier, folder path, invocation and behavior are unchanged.
+Standardized the display name and documentation titles as **GitHub Agent Resource Review**. Author and maintainer attribution remains Ansel. The `inspect-github-agent-resources` identifier, folder path and invocation are unchanged.
+
+Helper fixes (not yet in a release):
+- An excluded directory other than the snapshot's top-level `.git` (for example a nested `node_modules`, `.venv`, `__pycache__` or `.git`) is now a coverage gap (`excluded-directory:<path>`). Such a scan is `partial` and exits 1, and a comparison reports incomplete coverage instead of "Included fingerprints match". Previously a script inside such a directory could change while both scans reported `complete`. `references/scanner.md` and `references/maintenance.md` describe the new rule.
+- Both helpers now run when started through a symlink, such as a symlinked skill folder or a linked temporary directory. Previously `compare-snapshots.mjs` exited 0 with no output in that case, and the scanner did the same when the link had a different file name.
+- Regression tests cover both fixes.
 
 ### 0.1.0, tag `inspect-github-agent-resources-v0.1.0`, 2026-10-24
 
@@ -116,7 +121,8 @@ Content/path changes:
 ### Unreleased
 
 - Added a bilingual first-use tutorial, [`docs/price-watch/FIRST-USE.md`](docs/price-watch/FIRST-USE.md).
-- The skill's instructions, helper scripts and the `price-watch-v0.1.0` release are unchanged.
+- Helper fix (not yet in a release): `watchlist.py` stores `expires_at` and `baseline.observed_at` in the extended ISO 8601 form, for example `2027-01-01T00:00:00+08:00`. It also reads basic-format times, `+HHMM` offsets and fractional seconds of any length the same way on every supported Python. Previously a record saved with such a timestamp under Python 3.11 or later made `list` fail under Python 3.9. Regression tests cover both cases.
+- The skill's instructions and the `price-watch-v0.1.0` release are unchanged.
 
 ### 0.1.0, tag `price-watch-v0.1.0`, 2026-10-24
 

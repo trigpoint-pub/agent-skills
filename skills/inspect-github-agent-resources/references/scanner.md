@@ -8,13 +8,13 @@ It inventories relative file names, byte sizes, SHA-256 hashes, selected manifes
 
 It does not understand all languages, prove script behavior, detect every secret, inspect nested archives, resolve dependencies or advisories, validate publisher identity, or establish runtime behavior. Markdown parsing is heuristic. URLs in prose are not a complete map of network effects.
 
-`.git`, `node_modules`, `.venv`, and `__pycache__` are excluded and reported. Symlink targets are not intentionally traversed. Inventory fingerprints cover included files and link metadata only, not dependencies in excluded directories or symlink target contents. A `complete` scan is not a complete repository audit.
+`.git`, `node_modules`, `.venv`, and `__pycache__` are excluded and reported. The snapshot's top-level `.git` is checkout metadata, so excluding it leaves the scan `complete`. Any other excluded directory, at any depth, can hold code the resource loads or runs, so it is also recorded as a coverage gap (`excluded-directory:<path>`) and the scan is `partial`. Symlink targets are not intentionally traversed. Inventory fingerprints cover included files and link metadata only, not excluded directories or symlink target contents. A `complete` scan is not a complete repository audit.
 
 The tool checks some size/time changes during file reads. It is **not race-proof**, does not enforce filesystem sandboxing, and does not establish that an ancestor of the input path is not a link. The caller must supply an inert snapshot in an appropriate environment; do not scan an adversarial live filesystem.
 
 ## Limits and output
 
-Defaults: 500 files, 32 MiB total read, 16 MiB per hashed file, 2 MiB per text scan, 1,000 findings. CLI and programmatic overrides share hard ceilings. A cap or read error is a coverage gap. Partial scans suppress the resource-set fingerprint.
+Defaults: 500 files, 32 MiB total read, 16 MiB per hashed file, 2 MiB per text scan, 1,000 findings. CLI and programmatic overrides share hard ceilings. A cap, a read error or an excluded directory other than the top-level `.git` is a coverage gap. Partial scans suppress the resource-set fingerprint.
 
 Reaching the findings cap stops further collection and file traversal. The scan conservatively reports `partial` and `findingsTruncated`, including when the cap might exactly equal all available findings. Markdown references are collected incrementally rather than materialized in full. Current-file reading, hashing, Unicode analysis and regex search still require work within the byte limits; this is not a wall-clock or memory sandbox. An unreadable symlink is a coverage gap even when other files can still be scanned.
 

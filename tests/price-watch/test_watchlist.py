@@ -131,6 +131,26 @@ class WatchlistTests(unittest.TestCase):
             c = copy.deepcopy(self.contract); c['baseline']['observed_at'] = value
             self.run_cli('add', 'demo', contract=c, ok=False)
 
+    def test_timestamps_are_stored_in_extended_form(self):
+        c = copy.deepcopy(self.contract)
+        c['expires_at'] = '29990101T000000+0800'
+        c['baseline']['observed_at'] = '2020-01-01T00:00:00.5Z'
+        row = self.add(contract=c)
+        self.assertEqual(row['contract']['expires_at'], '2999-01-01T00:00:00+08:00')
+        self.assertEqual(row['contract']['baseline']['observed_at'], '2020-01-01T00:00:00.500000+00:00')
+
+    def test_records_with_compact_timestamps_still_list(self):
+        # Records saved before normalisation may hold forms that only Python 3.11+
+        # parses natively; every supported Python must still list them.
+        self.add()
+        c = copy.deepcopy(self.contract); c['expires_at'] = '2999-01-01T00:00:00+0800'
+        con = sqlite3.connect(self.db)
+        con.execute('UPDATE watches SET contract=? WHERE id=?', (json.dumps(c), 'demo'))
+        con.commit(); con.close()
+        rows = self.run_cli('list')
+        self.assertEqual(len(rows), 1)
+        self.assertFalse(rows[0]['expiry_due'])
+
     def test_untrusted_text_is_data_not_shell_code(self):
         sentinel = self.root / 'should-not-exist'
         c = copy.deepcopy(self.contract); c['title'] = '$(touch ' + str(sentinel) + ')'

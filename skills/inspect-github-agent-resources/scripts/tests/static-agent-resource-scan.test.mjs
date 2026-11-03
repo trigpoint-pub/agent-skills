@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -286,4 +287,43 @@ test('comment samples remain bounded while total counts and lines remain accurat
   assert.equal(comment.count, 1000);
   assert.deepEqual(comment.lines, Array.from({ length: 32 }, (_, i) => 2 + i * 2));
   assert.equal(comment.samplesTruncated, true);
+});
+
+test('excluded directories other than the top-level .git are coverage gaps', (t) => {
+  const root = makeFixture();
+  t.after(() => removeFixture(root));
+  write(root, 'SKILL.md', 'Run `bash scripts/node_modules/.bin/setup.sh` first.\n');
+  write(root, 'scripts/node_modules/.bin/setup.sh', 'echo hello\n');
+  write(root, 'tools/__pycache__/helper.cpython-312.pyc', 'bytecode');
+  write(root, 'vendor/lib/.git/HEAD', 'ref: refs/heads/main\n');
+  const result = scanRoot(root);
+  assert.equal(result.scanStatus, 'partial');
+  assert.equal(result.summary.hasCoverageGaps, true);
+  assert.equal(result.inventory.resourceSetSha256, null);
+  assert.deepEqual(
+    result.coverage.stopReasons.filter((reason) => reason.startsWith('excluded-directory:')).sort(),
+    ['excluded-directory:scripts/node_modules', 'excluded-directory:tools/__pycache__', 'excluded-directory:vendor/lib/.git'],
+  );
+});
+
+test('a top-level .git directory is excluded without a coverage gap', (t) => {
+  const root = makeFixture();
+  t.after(() => removeFixture(root));
+  write(root, 'SKILL.md', '# Fixture\n');
+  write(root, '.git/HEAD', 'ref: refs/heads/main\n');
+  const result = scanRoot(root);
+  assert.equal(result.scanStatus, 'complete');
+  assert.deepEqual(result.coverage.ignoredDirectories, ['.git']);
+  assert.deepEqual(result.coverage.stopReasons, []);
+});
+
+test('CLI runs when started through a symlink with a different name', (t) => {
+  const root = makeFixture();
+  t.after(() => removeFixture(root));
+  write(root, 'snapshot/SKILL.md', '# Fixture\n');
+  const linked = path.join(root, 'scan-link.mjs');
+  fs.symlinkSync(SCANNER_PATH, linked);
+  const run = spawnSync(process.execPath, [linked, '--root', path.join(root, 'snapshot')], { encoding: 'utf8' });
+  assert.equal(run.status, 0);
+  assert.equal(JSON.parse(run.stdout).scanStatus, 'complete');
 });

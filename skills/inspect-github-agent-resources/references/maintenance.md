@@ -37,6 +37,6 @@ For business requests, distinguish a delivery-pipeline unit (one repeatable clas
 
 Both paths must be already-local stable snapshots within the user's authorized reads. The helper reuses the inventory scanner and prints Markdown to stdout; it makes no network call, durable write, scheduler or candidate-code execution.
 
-It compares included file hashes and reports fingerprint differences that may include link metadata. Partial coverage cannot prove absence or equality. Excluded directories and linked target contents remain outside coverage. It does not decide whether a vulnerability was fixed, an API remains compatible, or an update should be installed.
+It compares included file hashes and reports fingerprint differences that may include link metadata. Partial coverage cannot prove absence or equality. Excluded directories and linked target contents remain outside coverage; an excluded directory other than the top-level `.git` makes that side partial. It does not decide whether a vulnerability was fixed, an API remains compatible, or an update should be installed.
 
 The maintained asset is the versioned evidence and its acceptance history. A matching fingerprint does not renew a security decision or service promise.

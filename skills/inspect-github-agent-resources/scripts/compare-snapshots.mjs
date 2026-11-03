@@ -1,5 +1,4 @@
-import path from 'node:path';
-import { pathToFileURL } from 'node:url';
+import fs from 'node:fs';
 import { scanRoot } from './static-agent-resource-scan.mjs';
 
 // Render names as inert text, even when a filename contains Markdown or HTML.
@@ -54,6 +53,13 @@ export function main(argv = process.argv.slice(2), write = value => process.stdo
   }
 }
 
-if (process.argv[1] && pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url) {
-  process.exitCode = main();
+// Compare real paths so the CLI also runs through a symlinked install or a linked temp dir.
+function invokedDirectly() {
+  if (!process.argv[1]) return false;
+  try {
+    return fs.realpathSync.native(process.argv[1]) === fs.realpathSync.native(new URL(import.meta.url));
+  } catch {
+    return false;
+  }
 }
+if (invokedDirectly()) process.exitCode = main();
