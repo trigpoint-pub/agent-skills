@@ -107,9 +107,9 @@ The two rewordings have not been re-tested. Any later change to a test question 
 ## 7. Not yet tested
 
 - The rewordings listed in §5.
-- The rules across types and the procedure for checking existing links.
+- The procedure for checking existing links on a real collection, and rules 1 and 5 across types. The procedure and rules 2, 3 and 4 were run on one synthetic example only, the six links of the README "Try it" example (§6).
 - People as annotators, and a second reference coder.
 - Models outside the Claude family.
 - Collections other than the maintainer's, and notes mainly in other languages.
 - Agreement when agents see the full text of every candidate note.
-- Installation and discovery on any agent host through the paths listed in `skills/concept-relations/README.md`.
+- Installation and discovery on Claude Code and GitHub Copilot, and through the Codex project path, all listed in `skills/concept-relations/README.md`. The Codex user path was tested once (§6).

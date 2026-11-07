@@ -18,11 +18,11 @@ The bound on a clean record ("no defect in n units means the rate could still be
 
 ## What the skill adds on its own
 
-These are working choices from the studio that wrote the skill. They are not taken from the references above:
+These are working choices from Trigpoint (2026), which wrote the skill. They are not taken from the references above:
 
 - **The starting rates, the floors, and the 20-unit clean run.** The cited research gives the direction (checks should not fall to nothing; trust should follow performance), not these numbers.
 - **The three cost tiers** and the rule that a tier C step acting on its own is out of scope.
-- **The idea that a sample check is a deliberate way of collecting failure experience.** Parasuraman and Manzey note that experience of automation failures may reduce complacency; they do not list sampling checks as a countermeasure. Treating sampling this way is the studio's inference.
+- **The idea that a sample check is a deliberate way of collecting failure experience.** Parasuraman and Manzey note that experience of automation failures may reduce complacency; they do not list sampling checks as a countermeasure. Treating sampling this way is an inference by Trigpoint (2026).
 - **The miss log format and the raise and lower rules.**
 
 ## How the references were checked

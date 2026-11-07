@@ -31,7 +31,7 @@ Today: she does all six by hand; about four hours per client per month.
 ```text
 Allocation ledger: Monthly client report (freelance marketing consultant)
 Scope: This ledger holds only for the workflow and the error costs listed here.
-Criterion: The two questions that set the levels (can an error be undone? does it travel on?) are a working rule from the Trigpoint studio, based on one documented case. They are not part of the published level-of-automation models.
+Criterion: The two questions that set the levels (can an error be undone? does it travel on?) are a working rule from Trigpoint (2026), based on one documented case and adapted from Parasuraman, Sheridan & Wickens (2000).
 Review by: 2027-01-31
 Status: proposal until the consultant adopts it.
 ```

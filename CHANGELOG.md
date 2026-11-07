@@ -17,7 +17,9 @@ Each skill has its own versions and tags (`{skill}-v{version}`).
 
 - Validation record: the status line now reads "0.1.0 experimental prerelease, 2026-11-02" instead of "release candidate, not yet released". No test result changed.
 - Method snapshot (`docs/allocate-ai-work/method.md`): the GitHub link now reads `github.com/trigpoint-pub/agent-skills`, as on the article page. No other text changed.
-- The skill's instructions and the `allocate-ai-work-v0.1.0` release are unchanged.
+- Attribution correction. The skill, its README, `SOURCES.md` and the method snapshot used to say that the two questions and Rule 1 are not part of the published level-of-automation models, and that the folding into five levels is the skill's own. A prior-art check found that Parasuraman, Sheridan and Wickens (2000) already use the costs of decision and action outcomes as a secondary criterion for choosing levels and advise keeping decision automation at a moderate level or below in high-risk situations, and that Endsley (1987), as reported by Kaber and Endsley (2004), already has five levels with the same cut points. These texts now cite both and name Trigpoint (2026) as the source of what the skill changed. Kaber and Endsley (2004) is added to `SOURCES.md`.
+- Method snapshot: now article version 1.1, with the attribution changes, the article's correction note and its section "When to run it again".
+- In the skill's instructions only the attribution sentences changed, including the ledger header; the steps, levels and rules are the same. The `allocate-ai-work-v0.1.0` release is unchanged.
 
 ### 0.1.0, tag `allocate-ai-work-v0.1.0`, 2026-11-02
 
@@ -29,7 +31,8 @@ First public release, experimental. See `docs/allocate-ai-work/VALIDATION.md` fo
 
 - Validation record: the status line now reads "0.1.0 experimental prerelease, 2026-11-02" instead of "release candidate, not yet released". No test result changed.
 - Method snapshot (`docs/calibrate-ai-checks/method.md`): the GitHub link now reads `github.com/trigpoint-pub/agent-skills`, as on the article page. No other text changed.
-- The skill's instructions and the `calibrate-ai-checks-v0.1.0` release are unchanged.
+- Attribution: the working defaults and the sampling inference are now credited to Trigpoint (2026) instead of "the studio", in the skill, its README, `SOURCES.md` and the method snapshot (now article version 1.1). No rule, number or test result changed.
+- The `calibrate-ai-checks-v0.1.0` release is unchanged.
 
 ### 0.1.0, tag `calibrate-ai-checks-v0.1.0`, 2026-11-02
 
@@ -41,13 +44,21 @@ First public release, experimental. See `docs/calibrate-ai-checks/VALIDATION.md`
 
 - Validation record: the status line now reads "0.1.0 experimental prerelease, 2026-11-02" instead of "release candidate, not yet released". No test result changed.
 - Method snapshot (`docs/classify-ai-incident/method.md`): the GitHub link now reads `github.com/trigpoint-pub/agent-skills`, as on the article page. No other text changed.
-- The skill's instructions and the `classify-ai-incident-v0.1.0` release are unchanged.
+- Attribution: the abuse checklist and the fix table are now credited to Trigpoint (2026), and "fix the mechanism, not the person" cites the system approach of Reason (2000), added to `SOURCES.md`. Changed in the skill, its README, `SOURCES.md` and the method snapshot (now article version 1.1). No category, rule or test result changed.
+- The `classify-ai-incident-v0.1.0` release is unchanged.
 
 ### 0.1.0, tag `classify-ai-incident-v0.1.0`, 2026-11-02
 
 First public release, experimental. See `docs/classify-ai-incident/VALIDATION.md` for what was and was not tested.
 
 ## prompt-architect
+
+### 0.3.0, tag `prompt-architect-v0.3.0`, 2026-11-07
+
+- Step 2 is now "Break down the task": it writes down the task's sub-tasks, the decisions they call for and what each decision rests on, instead of a sequence of reasoning steps. Whether the prompt should ask the model to reason step by step or check its own work moves to Step 5, where it is answered from the vendor's pages for the target model. The description, Step 6 rule 3 and the README say the same.
+- `SOURCES.md`: the task method is now credited as an arrangement by Trigpoint (2026) whose components follow the vendors' own guidance, instead of "our own working method".
+- Validation: check 1 now asks for a real breakdown of the task; an instruction to reason step by step or to self-check is judged under check 6. The 0.3.0 acceptance run (section 2c) ran R1 to R6 and N1 to N3 on Claude Code with the skill path given; eight passed, and R2 failed check 6 on a usage note that came from the test host's own notes.
+- The README, the first-use tutorial and the collection README point to the 0.3.0 release.
 
 ### 0.2.0, 2026-11-01
 
@@ -63,6 +74,11 @@ First public release, experimental, by Ansel under MIT. Includes the task-method
 Codex installation and discovery, revised practice cases and a naturally refused-fetch fallback were checked on macOS; see [VALIDATION.md](docs/prompt-architect/VALIDATION.md). The instruction body is unchanged from that tested candidate; the identical description is now quoted so strict YAML parsers accept the frontmatter. Generated prompts have not been evaluated on their target platforms with real inputs. A separate Trigpoint method article is not part of this release.
 
 ## concept-relations
+
+### Unreleased
+
+- Validation record: §7 no longer lists as untested what the October 2026 release test in §6 covered, namely installation and discovery through the Codex user path and the checking procedure (rules 2, 3 and 4) on the README example. No test result changed.
+- The skill's instructions and the `concept-relations-v0.1.0` release are unchanged.
 
 ### 0.1.0, tag `concept-relations-v0.1.0`, 2026-10-28
 

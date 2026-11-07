@@ -1,6 +1,6 @@
 # Allocate a workflow before you hand it to AI
 
-> Snapshot of article version 1.0 at <https://trigpoint.pub/methods/allocate-a-workflow>, written for allocate-ai-work v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
+> Snapshot of article version 1.1 at <https://trigpoint.pub/methods/allocate-a-workflow>, written for allocate-ai-work v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
 
 “Should we hand this to AI?” treats automation as a single switch. A workflow usually gathers information, analyses it, decides and acts, and each of those stages can be handed over to a different degree. Handing over more is a trade rather than an upgrade: once a stage is handed over, the work left to the person changes, and so does their ability to take over when it fails.
 
@@ -29,7 +29,7 @@ Sometimes most errors at a stage can be undone and one class cannot. Then set a 
 
 The ceiling is the most the reasons allow; it is not a target. When the recommendation sits below it, say why.
 
-The two questions, and the rule that decide stages and irreversible actions never go above suggest, are a working rule from our studio, drawn from one documented case. They are not part of the published level-of-automation models. The five levels fold the ten-level scale of Sheridan and Verplank (1978); the folding is ours too. The ledger header says so.
+The two questions, and the rule that decide stages and irreversible actions never go above suggest, are a working rule that Trigpoint (2026) drew from one documented case, adapted from Parasuraman, Sheridan and Wickens (2000), who use the costs of decision and action outcomes as a secondary criterion for choosing levels and advise keeping decision automation at a moderate level or below in high-risk situations. The two questions split that cost into whether an error can be undone and whether it travels on before anyone notices, and they cap every decide stage at suggest. The five levels have the same cut points as the five levels of Endsley (1987), as reported by Kaber and Endsley (2004). Level 4 replaces the original veto before the action takes effect with an undo after it takes effect, with a receipt for every run, which is closer to level 7 of Sheridan and Verplank (1978); that change is Trigpoint's (2026). The ledger header says so.
 
 **3. Ask what work is left.** For every stage at prepare or above, write what the person still does after handover, then ask: will they still see enough of the work to notice a failure and understand it? Will they still have the practice to do the stage by hand when the automation stops? If either answer is no, lower the level by one, or add a takeover path that keeps them in practice, such as doing the stage by hand on a fixed schedule. The work left behind is a different job: checking data someone else cleaned is a different task from cleaning it (Bainbridge 1983; Endsley and Kiris 1995; Dekker and Woods 2002 on “who is better at it” lists).
 
@@ -43,7 +43,7 @@ Two rules hold throughout. The person is whoever answers for the stage: if an AI
 
 ## A blank ledger and an example
 
-A blank ledger has four header lines: scope (it holds only for the workflow and error costs listed), the criterion statement (the two questions are the studio's own rule), a review date, and a status (a proposal until the owner adopts it). Its nine columns are step, stage, level, reason (the answers to the two questions), work left for the person, check, takeover, basis and evidence.
+A blank ledger has four header lines: scope, which holds only for the workflow and error costs listed; the criterion statement, which names Trigpoint (2026) as the source of the two questions, adapted from Parasuraman, Sheridan and Wickens (2000); a review date; and a status, a proposal until the owner adopts it. Its nine columns are step, stage, level, reason (the answers to the two questions), work left for the person, check, takeover, basis and evidence.
 
 This is a demonstration sample. A freelance consultant sends six retainer clients a monthly performance report and wants to hand the sensible parts to an AI assistant that can read her analytics exports, draft text, build a PDF and send email from her account. The analysis stage sits at prepare: the assistant computes the changes and lists candidate reasons, each marked as a hypothesis, and she keeps, rewrites or drops each one; a made-up reason reads as well as a true one, and this analysis is what her clients pay for. The sending action sits at suggest: an email to the wrong person would hand one client's data to another and cannot be recalled. The assistant may alert her when the client name on the report does not match the recipient; she presses send. The full example ledger is on GitHub.
 
@@ -56,6 +56,8 @@ The first scale had no place for a scheduled job that only prepares work, and th
 The first ceiling table had a row for “a stage a named person must answer for”, capped at suggest. Someone answers for every stage, so the row capped them all. It now reads “a stage that speaks or commits for a person: sends, publishes, pays, signs”.
 
 The same revision said who “the person” is: whoever answers for the stage.
+
+Attribution correction, November 2026. This page used to say that the two questions and the ceiling rule were not part of the published level-of-automation models, and that the folding into five levels was ours. A prior-art check found that Parasuraman, Sheridan and Wickens (2000) already use outcome costs as a secondary criterion for choosing levels and advise keeping decision automation at a moderate level or below in high-risk situations, and that Endsley (1987) already has five levels with the same cut points. The end of step 2 now cites both.
 
 ## How well it works so far
 
@@ -77,6 +79,16 @@ The evidence so far is our own test: one small studio has used it and recorded t
 
 Before handing one concrete workflow (3 to 12 steps) to AI, or when reviewing one that already runs. Not for rating how well a person uses AI, choosing tools or vendors, regulated or safety-critical work (those have their own standards; a ledger can sit beside them, not replace them), or a request with no concrete workflow, such as “use AI more”.
 
+## When to run it again
+
+A ledger's levels go stale once set; when any of the following happens, write a new ledger, or review the existing one by adding today's level as in step 6:
+
+- A new workflow is handed to AI: write a separate ledger for it; each ledger holds only for the workflow and error costs it lists.
+- The review date on the ledger arrives.
+- Something changes in the workflow, the tools it uses or what an error costs.
+- An incident happens: classify it first, following [Classify an AI incident before you fix it](https://trigpoint.pub/methods/classify-an-incident). If it is misuse, the fix includes considering a lower level for that stage; if it is abuse, the fix is to redesign the allocation. Both lead back to the ledger.
+- The same kind of miss repeats in the miss log: following [Calibrate how often you check AI output](https://trigpoint.pub/methods/calibrate-a-check), this is when to review the step's level.
+
 ## Get the skill
 
 The skill, its research index and the example ledger are on GitHub: [github.com/trigpoint-pub/agent-skills](https://github.com/trigpoint-pub/agent-skills) (`skills/allocate-ai-work/`). Two more belong to the same set: `calibrate-ai-checks`, for how often to check a step while it runs, and `classify-ai-incident`, for after something goes wrong. Each installs on its own.
@@ -85,10 +97,11 @@ The skill, its research index and the example ledger are on GitHub: [github.com/
 
 1. Sheridan and Verplank (1978) on levels of automation.
 2. Parasuraman, Sheridan and Wickens (2000) on stages and levels.
-3. Fitts (1951), and Dekker and Woods (2002), on “who is better at it” lists.
-4. Bainbridge (1983) on the ironies of automation.
-5. Endsley and Kiris (1995) on the out-of-the-loop problem.
-6. Parasuraman and Manzey (2010) on complacency and bias.
-7. Miller and Parasuraman (2007) on who changes the level.
+3. Kaber and Endsley (2004) on levels of automation, reporting the five levels of Endsley (1987).
+4. Fitts (1951), and Dekker and Woods (2002), on “who is better at it” lists.
+5. Bainbridge (1983) on the ironies of automation.
+6. Endsley and Kiris (1995) on the out-of-the-loop problem.
+7. Parasuraman and Manzey (2010) on complacency and bias.
+8. Miller and Parasuraman (2007) on who changes the level.
 
 Full references and how they were checked are in [`docs/allocate-ai-work/SOURCES.md`](SOURCES.md) on GitHub.

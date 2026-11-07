@@ -68,6 +68,6 @@ The coordinating agent wrote the accounts and compared the results, and runners 
 
 ## Sources
 
-The stages and levels come from Sheridan and Verplank (1978) and Parasuraman, Sheridan and Wickens (2000); the residual work question from Bainbridge (1983), Endsley and Kiris (1995) and Dekker and Woods (2002); the checks from Parasuraman and Manzey (2010), Mackworth (1948) and Lee and See (2004). The two-question rule and the five-level folding are the studio's own working rule. Full references and what was checked are in [SOURCES.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/allocate-ai-work/SOURCES.md).
+The stages and levels come from Sheridan and Verplank (1978) and Parasuraman, Sheridan and Wickens (2000); the residual work question from Bainbridge (1983), Endsley and Kiris (1995) and Dekker and Woods (2002); the checks from Parasuraman and Manzey (2010), Mackworth (1948) and Lee and See (2004). The two-question rule and the five-level scale are Trigpoint's (2026) adaptations of Parasuraman, Sheridan and Wickens (2000) and Endsley (1987). Full references and what was checked are in [SOURCES.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/allocate-ai-work/SOURCES.md).
 
 `VALIDATION.md`, `SOURCES.md` and the method article snapshot live in the repository under `docs/allocate-ai-work/`, not in this folder. Their GitHub links also work from an installed copy with web access.

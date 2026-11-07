@@ -2,7 +2,7 @@
 
 What has been tested, what has not, and the checks used.
 
-**Status:** 0.2.0 experimental prerelease, 2026-11-01. The candidate passed the applicable checks in the runs below; this is not a quality benchmark or a guarantee of downstream results. Earlier release: 0.1.0, 2026-10-26.
+**Status:** 0.3.0 experimental prerelease, 2026-11-07. In its acceptance run (section 2c), eight of nine requests passed every applicable check; the failure is explained there. This is not a quality benchmark or a guarantee of downstream results. Earlier releases: 0.2.0, 2026-11-01; 0.1.0, 2026-10-26.
 
 ## 1. Private predecessor, October 2026
 
@@ -90,6 +90,34 @@ Host: Codex desktop 0.166.0-alpha.5.1 on macOS arm64, with the skill installed a
 
 Check 9, both runs: 27 links opened over plain HTTP; the OpenAI model-release-notes page refused the plain HTTP client and was read with a web reader.
 
+## 2c. Acceptance run of 0.3.0 (Step 2 breaks the task down)
+
+0.3.0 changes Step 2 from "Write the reasoning steps" to "Break down the task": the prompt states the task's sub-tasks, the decisions they call for and what each decision rests on. Whether to ask for step-by-step reasoning or a closing self-check moves to Step 5, where it is answered from the vendor's pages. Check 1 changed with it (section 4). Sections 1, 2 and 2b used the earlier check 1, "The prompt contains real reasoning steps for the task type, not just a heading." Their results describe 0.1.0 and 0.2.0, not this version.
+
+**Run, 2026-11-07**
+
+- Host: Claude Code desktop app on macOS. The skill was not installed: each sub-agent was given the path to a copy of the candidate skill folder, told to read `SKILL.md` and follow it, and told not to read any other local file. Its `SKILL.md` and `references/` files match this release byte for byte; only the README's version, release-link and tested-on lines were changed afterwards, and no run opened the README. Installation and discovery were not exercised; they were last tested on Codex for 0.2.0, and the folder's layout has not changed.
+- Requests R1 to R6 and N1 to N3 (section 3), one fresh sub-agent each, given only "Use prompt-architect to handle this request:", the request and the skill path. All ran on one model (Claude Opus 5.5) at one effort setting. Sub-agents could read public web pages. They also inherited the host's own instructions and stored notes, which affected R2 (below).
+- The coordinating agent scored the results against section 4. For each run it checked the cited pages for the model choice, for the decision on step-by-step reasoning or a closing self-check, and for a sample of the other points. Files read (check 10) come from each run's tool record. One run per request, not blind; no generated prompt was run on its target platform.
+
+| Request | Result | Note |
+|---|---|---|
+| R1 (review, Claude) | pass | Assumed Claude Opus 5.5, citing the models overview, which says to start with that model when unsure. No "think carefully" line, which the Opus 5.5 prompting page suggests removing from chat system prompts |
+| R2 (summarize, Codex) | fail | Check 6: one usage note, about typing `@` with an input method, cited the Codex prompting page, which does not say it. The note came from the host's stored notes, not from the skill or a vendor page. The rest of the answer passed, including a closing check that the same page recommends |
+| R3 (generate, Gemini) | pass | Model unknown for the Gemini app. No step-by-step or self-check instruction, citing Google's prompting page |
+| R4 (classify, ChatGPT) | pass | Assumed the GPT-6 family in ChatGPT, exact version unknown, citing the model release notes, and used only guidance that applies to the whole family |
+| R5 (no platform) | pass | One clarifying question, nothing else |
+| R6 (no vendor guide) | pass | Opened no vendor file; generic structure, answers cite the user's documents, usage notes say no platform guidance was checked |
+| N1 (Claude Opus 5.5) | pass | No "think carefully" line and no request to write out reasoning, which the model's page says may be declined. Uses that page's note for pasted text |
+| N2 (GPT-6.1 Sol in Codex) | pass | Closing check traced to the Codex prompting page; no step-by-step instruction, citing the reasoning guide |
+| N3 (Gemini 3.8 Flash) | pass | No step-by-step instruction, citing Google's prompting page. Sampling settings left unset, as the model's release notes say |
+
+- Three cited points were worded more broadly than their pages (in R4, N2 and N3: a model's effort options, when to pause for approval, and avoiding persuasive language). Each still traced to the page and was counted under check 6.
+- In 0.2.0, R1 and R4 answered "model unknown". In this run both named an assumed model with a cited reason, which Step 5 allows. Which of the two a product-only request gets can differ between runs and hosts.
+- Check 10: every run with a platform opened only `official-sources.md` and the target vendor's file; R5 and R6 opened no vendor file.
+- Check 9: 27 of the 28 links opened. Four Google links now redirect from `ai.google.dev` to `aistudio.google.com`; the source list still uses the old addresses. The OpenAI model-release-notes page refused the reading tool (HTTP 403) and was read in a browser.
+- Time per request: 12 to 312 seconds. Sub-agent token totals as reported by the host: about 77,000 to 152,000 per request, about 1.04 million for the nine.
+
 ## 3. Practice requests
 
 | ID | Request | What it exercises |
@@ -108,7 +136,7 @@ Check 9, both runs: 27 links opened over plain HTTP; the OpenAI model-release-no
 
 A result passes only if every applicable check holds.
 
-1. The prompt contains real reasoning steps for the task type, not just a heading.
+1. The prompt contains a real breakdown of the task for the task type (its sub-tasks and the decisions they call for), not just a heading. Any instruction to reason step by step or to self-check counts as platform-specific under check 6.
 2. The prompt contains success criteria someone could check.
 3. The prompt defines output fields and their order.
 4. No emoji or decorative symbols are used as structure, unless the purpose is casual.
@@ -122,10 +150,10 @@ A result passes only if every applicable check holds.
 ## 5. Not yet tested
 
 - Host-native rendering of documentation links across all agents. This release uses fixed-version GitHub links from the installed README instead of assuming the repository docs were copied with the skill.
-- Installation and discovery on hosts other than Codex on macOS (Claude Code was run with the skill path given, not installed), and Gemini as a host.
+- Installation and discovery on hosts other than Codex on macOS (Claude Code was run with the skill path given, not installed), and Gemini as a host. For 0.3.0, installation was not tested on any host.
 - Generated prompts run on their target platforms, and the quality of their results on real contracts, books, tickets, or documents.
 - Working without web access, and a broken link with no reachable replacement.
 - Vendor pages that contradict each other, or page content written to mislead the agent.
 - Repeated runs of the same request.
-- Model-specific guidance when only a product is named. In the 0.2.0 runs the skill then answered "model unknown" (R1 and R4, at medium and high effort) and used only guidance that does not depend on the model. Name the model to get model-specific guidance.
+- Model-specific guidance when only a product is named. In the 0.2.0 runs the skill then answered "model unknown" (R1 and R4, at medium and high effort) and used only guidance that does not depend on the model. Name the model to get model-specific guidance. In the 0.3.0 run, R1 and R4 named an assumed model with a cited reason instead.
 - Guide pages that cover several models at once, such as OpenAI's latest-model guide: whether an agent always keeps to the sections for the named model.

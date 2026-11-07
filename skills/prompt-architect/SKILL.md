@@ -1,6 +1,6 @@
 ---
 name: prompt-architect
-description: "Writes a ready-to-paste prompt for a stated purpose on a stated AI platform. First builds the task method (task type, reasoning steps, measurable success criteria, output fields), then reads the platform vendor's current official prompting documentation and expresses the method in that platform's conventions, citing the pages it used. Use when asked to write, design, or rewrite a prompt, system prompt, or custom instructions for ChatGPT, Claude, Codex, Gemini, or another assistant. Not a prompt library: it does not ship fixed per-vendor rules, it reads the vendor's pages each time."
+description: "Writes a ready-to-paste prompt for a stated purpose on a stated AI platform. First builds the task method (task type, task breakdown, measurable success criteria, output fields), then reads the platform vendor's current official prompting documentation and expresses the method in that platform's conventions, citing the pages it used. Use when asked to write, design, or rewrite a prompt, system prompt, or custom instructions for ChatGPT, Claude, Codex, Gemini, or another assistant. Not a prompt library: it does not ship fixed per-vendor rules, it reads the vendor's pages each time."
 ---
 
 # Prompt Architect
@@ -24,15 +24,17 @@ When you ask, the question is your whole answer: do not return the three-part Ou
 
 Decide which task type the purpose belongs to. Common types: summarize or extract · generate or write · review or evaluate · classify or route · converse or support · transform or translate. The type shapes Steps 2 to 4. If the purpose mixes types, name the main one and note the second.
 
-## Step 2. Write the reasoning steps
+## Step 2. Break down the task
 
-Write the sequence of checks the model should go through before and while producing its answer, specific to the task type. Examples:
+Write down what the task consists of, specific to the task type: its sub-tasks, the decisions it calls for along the way, and what each decision rests on. Examples:
 
-- Summarize or extract: identify the core thesis, map how the main elements relate, then select the points with the highest value or most direct use.
-- Review or evaluate: set the evaluation dimensions first, gather evidence for each dimension, look for counter-evidence, then reach a judgment.
-- Generate or write: fix the audience and what a successful result looks like, list the constraints, then produce.
+- Summarize or extract: what has to be found (the core thesis, how the main elements relate) and what has to be selected, by which rule (the points with the highest value or most direct use).
+- Review or evaluate: the evaluation dimensions; for each, what counts as evidence and what would count against it; the judgment the answer must reach.
+- Generate or write: the audience, what a successful result looks like, and the constraints the result must meet.
 
-These are steps for doing the task. They are not "check your work again" instructions. Whether the target model needs an extra self-check at the end is a platform question, answered in Step 5. A separate review pass that the user runs afterwards is a different thing and may be recommended.
+Where order matters, for example when a judgment must rest on the evidence, state the order.
+
+This step describes the task, not the model's thinking. Do not write a script for how the model should reason, and do not add "check your work again" instructions here. Whether the prompt should ask for step-by-step reasoning or a closing self-check depends on the target model and is answered in Step 5. A separate review pass that the user runs afterwards is a different thing and may be recommended.
 
 ## Step 3. Set measurable success criteria
 
@@ -48,7 +50,7 @@ Define the fields of the answer and their order. For a summary, for example: pri
 2. Open `references/official-sources.md` to find the vendor's file, then open only that file (`references/openai.md`, `references/anthropic.md`, or `references/google.md`). Start from the vendor's general prompting guide and its latest-model or model-overview page, and follow them to the page for the specific model when one exists. The file's table names the page to check first for each point in item 3.
 3. From the pages you actually read, note what applies to this prompt:
    - how the vendor recommends structuring a prompt (sections, tags, role statement, examples or no examples);
-   - reasoning or effort controls and their recommended settings for this kind of task;
+   - reasoning or effort controls and their recommended settings for this kind of task, and whether the prompt should ask the model to reason step by step or check its own work;
    - instructions the vendor says to remove or avoid for this model, including outdated habits;
    - output formatting conventions;
    - whether the model is marked preview, beta, or legacy.
@@ -68,7 +70,7 @@ Rules:
 
 1. **Method first.** Finish Steps 1 to 4 before applying platform conventions. The method decides the substance; the platform decides the form.
 2. **One platform.** Use the conventions of the target platform only. Do not mix conventions from different vendors.
-3. **Substance, not headings.** The prompt must contain the actual reasoning steps, success criteria, and output fields, not just the headings "Role / Task / Constraints / Output".
+3. **Substance, not headings.** The prompt must contain the actual task breakdown, success criteria, and output fields, not just the headings "Role / Task / Constraints / Output".
 4. **Measured, positive constraints.** State limits as targets with a measure ("at most 200 words") rather than bare prohibitions where you can.
 5. **Self-contained.** The prompt must work when pasted alone. No source numbers like `[7]`, no references to these instructions, no tool or feature names that the target platform does not have.
 6. **Plain structure.** Unless the purpose is casual or social, do not use emoji or decorative symbols as section markers. For coding agents, use plain text or Markdown headings only.

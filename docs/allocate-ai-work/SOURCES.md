@@ -9,6 +9,7 @@ What the skill takes from published research, what it adds on its own, and how t
 | Automation as a scale of levels, not a switch | Sheridan, T. B., & Verplank, W. L. (1978). *Human and Computer Control of Undersea Teleoperators*. Cambridge, MA: MIT Man-Machine Systems Laboratory. https://doi.org/10.21236/ADA057655 |
 | Levels set separately for four stages (gather, analyse, decide, act) | Parasuraman, R., Sheridan, T. B., & Wickens, C. D. (2000). A model for types and levels of human interaction with automation. *IEEE Transactions on Systems, Man, and Cybernetics, Part A*, 30(3), 286–297. https://doi.org/10.1109/3468.844354 |
 | A higher level is a trade: recovery after failure, joint option generation | Endsley, M. R., & Kaber, D. B. (1999). Level of automation effects on performance, situation awareness and workload in a dynamic control task. *Ergonomics*, 42(3), 462–492. https://doi.org/10.1080/001401399185595 |
+| Five levels with the same cut points as this skill's scale, from Endsley (1987), as reported here | Kaber, D. B., & Endsley, M. R. (2004). The effects of level of automation and adaptive automation on human performance, situation awareness and workload in a dynamic control task. *Theoretical Issues in Ergonomics Science*, 5(2), 113–153. https://doi.org/10.1080/1463922021000054335 |
 | "Who is better at it" lists, and their history | Fitts, P. M. (Ed.) (1951). *Human Engineering for an Effective Air-Navigation and Traffic-Control System*. Washington, DC: National Research Council, Committee on Aviation Psychology. |
 | Automation changes the work it leaves behind; it does not just move tasks | Dekker, S. W. A., & Woods, D. D. (2002). MABA-MABA or abracadabra? Progress on human-automation co-ordination. *Cognition, Technology & Work*, 4(4), 240–244. https://doi.org/10.1007/s101110200022 |
 | The hardest residual work lands on the person | Bainbridge, L. (1983). Ironies of automation. *Automatica*, 19(6), 775–779. https://doi.org/10.1016/0005-1098(83)90046-8 |
@@ -23,16 +24,18 @@ What the skill takes from published research, what it adds on its own, and how t
 
 ## What the skill adds on its own
 
-These are working rules from the studio that wrote the skill. They are not taken from the references above and have not been validated beyond the studio's own use:
+These are working rules from Trigpoint (2026), which wrote the skill. Where a rule adapts one of the references above, the entry says so. None has been validated beyond Trigpoint's own use:
 
-- **The two questions** (can an error be undone? does it travel on before anyone notices?) and the ceiling table built on them.
-- **Rule 1**: decide stages, and actions that cannot be undone, never go above "suggest".
-- **The five-level scale**: a folding of the ten-level scale into five levels. The original does not define these five.
+- **The two questions** (can an error be undone? does it travel on before anyone notices?) and the ceiling table built on them: adapted from the secondary criterion of Parasuraman, Sheridan & Wickens (2000), the costs of decision and action consequences.
+- **Rule 1**: decide stages, and actions that cannot be undone, never go above "suggest". Parasuraman, Sheridan & Wickens (2000) already advise keeping decision automation at a moderate level or below in high-risk situations; Rule 1 makes the cap unconditional.
+- **The five-level scale**: the same cut points as the five levels of Endsley (1987), as reported by Kaber & Endsley (2004). Level 4 replaces veto before the action with undo after it, with a receipt per run; that change is Trigpoint's (2026).
 - **The evidence grades** (theory, own test, external adoption, external results).
 
 ## How the references were checked
 
-Each reference was taken from a node of the Human-Automation Interaction shelf at trigpoint.pub, where its bibliography was checked field by field before publication. The verification status in `references/basis-index.md` is the status shown on that node's page: "Bibliography checked" means the bibliographic record was confirmed; "Abstracts checked" and "Checked against the sources" go further. Where a node's page says the full text was not read, the skill relies only on the claim at that level and does not quote the paper.
+Each reference except Kaber & Endsley (2004) was taken from a node of the Human-Automation Interaction shelf at trigpoint.pub, where its bibliography was checked field by field before publication. The verification status in `references/basis-index.md` is the status shown on that node's page: "Bibliography checked" means the bibliographic record was confirmed; "Abstracts checked" and "Checked against the sources" go further. Where a node's page says the full text was not read, the skill relies only on the claim at that level and does not quote the paper.
+
+Kaber & Endsley (2004) and the two points from Parasuraman, Sheridan & Wickens (2000) cited under "What the skill adds on its own" were added in November 2026 after a prior-art check. They were read in copies of the full text (an author-archived copy and a third-party copy), not the publishers' pages. Endsley (1987) is cited only as Kaber & Endsley (2004) report it.
 
 ## Third-party material
 

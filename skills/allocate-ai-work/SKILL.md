@@ -49,7 +49,7 @@ What starts a job does not decide 3 versus 4; presence does. A background proces
 
 **Who is "the person".** The person is the human who answers for the stage. If an AI agent performs a stage on that person's behalf (reviews a result, decides, sends a reply), that is automation of the stage, rated like any other, even when the person is nearby.
 
-This five-level scale is a simplification of the ten-level scale of Sheridan and Verplank (1978), applied per stage as in Parasuraman, Sheridan and Wickens (2000). The folding into five levels is this skill's, not theirs.
+This five-level scale is a simplification of the ten-level scale of Sheridan and Verplank (1978), applied per stage as in Parasuraman, Sheridan and Wickens (2000). Its cut points are the same as the five levels of Endsley (1987), as reported by Kaber and Endsley (2004). Level 4 replaces the original veto before the action takes effect with an undo after it, with a receipt for every run; that change is Trigpoint's (2026).
 
 ## Rules
 
@@ -58,7 +58,7 @@ This five-level scale is a simplification of the ten-level scale of Sheridan and
 3. **A level is changed by a person, on a date.** Never let the automation raise or lower its own level. A system that switches itself has taken the decision away from the person who answers for it.
 4. **Every ledger has a review date.** Workflows, tools and error costs change; levels set once go stale.
 
-Rule 1 and the two questions are a working rule from the studio that wrote this skill, based on one documented case. They are not part of the published level-of-automation models, and the ledger header says so.
+Rule 1 and the two questions are a working rule from Trigpoint (2026), which wrote this skill, based on one documented case and adapted from Parasuraman, Sheridan & Wickens (2000). The ledger header says so.
 
 ## Workflow
 
@@ -141,7 +141,7 @@ Write the ledger in the user's language. Keep the basis fields exactly as they a
 ```text
 Allocation ledger: {workflow}
 Scope: This ledger holds only for the workflow and the error costs listed here.
-Criterion: The two questions that set the levels (can an error be undone? does it travel on?) are a working rule from the Trigpoint studio, based on one documented case. They are not part of the published level-of-automation models.
+Criterion: The two questions that set the levels (can an error be undone? does it travel on?) are a working rule from Trigpoint (2026), based on one documented case and adapted from Parasuraman, Sheridan & Wickens (2000).
 Review by: {date}
 Status: proposal until {owner} adopts it.
 
@@ -172,5 +172,5 @@ Add the **Now** column after Level when reviewing.
 
 ## Limits
 
-- The research behind the stages, the residual work and the checks is published and cited. The two-question rule and the five-level folding are this studio's working rule, tested so far only on its own workflows. Details are in `VALIDATION.md` and `SOURCES.md` in the skill's repository, not in this installed folder.
+- The research behind the stages, the residual work and the checks is published and cited. The two-question rule and the five-level scale are Trigpoint's (2026) adaptations of Parasuraman, Sheridan & Wickens (2000) and Endsley (1987), tested so far only on its own workflows. Details are in `VALIDATION.md` and `SOURCES.md` in the skill's repository, not in this installed folder.
 - The ledger is as good as the error costs it is given. If the costs are guesses, say so in "Not covered".

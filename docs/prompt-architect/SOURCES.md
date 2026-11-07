@@ -4,7 +4,7 @@
 
 The skill has two layers, and they come from different places.
 
-- **Task method (Steps 1 to 4 and the writing rules).** Our own working method for writing prompts: classify the task, write the reasoning steps, set measurable success criteria, fix the output fields, then express the result in the target platform's conventions. It was developed and used privately before this release. It is a method, not a research result; it has not been compared against other prompting methods.
+- **Task method (Steps 1 to 4 and the writing rules).** A working method for writing prompts whose arrangement is Trigpoint's (2026); its components follow the vendors' own guidance: classify the task, break it down into sub-tasks and decisions, set measurable success criteria, fix the output fields, then express the result in the target platform's conventions. It was developed and used privately before this release. It is a method, not a research result; it has not been compared against other prompting methods.
 - **Platform conventions (Step 5).** Not included in the skill. The agent reads them at run time from the vendors' own documentation, listed in one file per vendor under `skills/prompt-architect/references/` (`official-sources.md` says which file to open).
 
 ## Why no vendor rules are included

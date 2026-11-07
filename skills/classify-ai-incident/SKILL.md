@@ -101,7 +101,7 @@ Point the fix at a mechanism:
 | Abuse | Redesign the allocation: stage, level, thresholds, takeover path (`allocate-ai-work`). Return the level switch to a person. |
 | Use | Fix the automation's own defect; reliance can stay as it is. |
 
-"Remind people to be careful" or "train them to pay attention" is never the fix on its own. Fixing the mechanism, not the person, is this studio's repair pattern; the research basis is that abuse places the cause upstream, and that attention-based failures persist with practice and are not reliably removed by instructions to verify.
+"Remind people to be careful" or "train them to pay attention" is never the fix on its own. Fixing the mechanism, not the person, follows the system approach described by Reason (2000); making it a fixed repair step in this record is Trigpoint's (2026). The research basis is that abuse places the cause upstream, and that attention-based failures persist with practice and are not reliably removed by instructions to verify.
 
 ## Output
 
@@ -141,5 +141,5 @@ Cite 0 to 3 basis nodes (write `Basis: none` for zero), only where they support 
 
 ## Limits
 
-- The four categories come from Parasuraman and Riley (1997); this skill's wording of them is a summary, and the paper's verbatim definitions are not quoted here. The abuse checklist in Step 3 and the fix table are this studio's working choices, tested so far on its own incident records. Details are in `VALIDATION.md` and `SOURCES.md` in the skill's repository, not in this installed folder.
+- The four categories come from Parasuraman and Riley (1997); this skill's wording of them is a summary, and the paper's verbatim definitions are not quoted here. The abuse checklist in Step 3 and the fix table are working choices from Trigpoint (2026), tested so far on its own incident records. Details are in `VALIDATION.md` and `SOURCES.md` in the skill's repository, not in this installed folder.
 - A classification is only as good as the account of the incident. Short or one-sided accounts lead to low confidence; say so.

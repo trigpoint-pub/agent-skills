@@ -62,7 +62,7 @@ A tier C step that acts on its own is outside this skill: send it back to `alloc
 
 ### Step 3: Set the starting rate
 
-These are working defaults from the studio that wrote this skill, not figures from the cited research. Adjust them and write down why.
+These are working defaults from Trigpoint (2026), which wrote this skill, not figures from the cited research. Adjust them and write down why.
 
 | Track record | Tier A | Tier B | Tier C |
 |---|---|---|---|
@@ -162,5 +162,5 @@ Cite 0 to 3 basis nodes from the index (write `Basis: none` for zero), only wher
 
 ## Limits
 
-- The research cited supports the direction of the method: trust should be calibrated, reliable automation erodes checking, sustained watching fails, and instructions to verify are weak. The starting rates, the floors, the 20-unit run, and the idea that a sample check is a deliberate way of collecting failure experience are this studio's working choices, tested so far on its own workflows. The cited research does not supply those numbers. Details are in `VALIDATION.md` and `SOURCES.md` in the skill's repository, not in this installed folder.
+- The research cited supports the direction of the method: trust should be calibrated, reliable automation erodes checking, sustained watching fails, and instructions to verify are weak. The starting rates, the floors, the 20-unit run, and the idea that a sample check is a deliberate way of collecting failure experience are working choices from Trigpoint (2026), tested so far on its own workflows. The cited research does not supply those numbers. Details are in `VALIDATION.md` and `SOURCES.md` in the skill's repository, not in this installed folder.
 - The rule-of-three bound assumes units are independent and sampled at random. Batches that fail together break that assumption; say so in "Not covered" when it applies.

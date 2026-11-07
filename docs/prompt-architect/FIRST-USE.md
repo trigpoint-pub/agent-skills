@@ -1,8 +1,8 @@
 # Prompt Architect: first use / 最短教學
 
-Version 0.2.0 · experimental prerelease · Ansel · MIT
+Version 0.3.0 · experimental prerelease · Ansel · MIT
 
-[Skill and installation instructions](../../skills/prompt-architect/README.md) · [Release](https://github.com/trigpoint-pub/agent-skills/releases/tag/prompt-architect-v0.2.0) · [Validation](VALIDATION.md)
+[Skill and installation instructions](../../skills/prompt-architect/README.md) · [Release](https://github.com/trigpoint-pub/agent-skills/releases/tag/prompt-architect-v0.3.0) · [Validation](VALIDATION.md)
 
 ## English
 
@@ -12,7 +12,7 @@ Build a prompt that turns meeting notes into action items for use in ChatGPT. Th
 
 ### 1. Get and load the skill
 
-Download `prompt-architect-v0.2.0.zip` from the release linked above and unzip it. Copy the entire `prompt-architect/` folder, including `references/` and `LICENSE`, into your agent's skill directory. The final path must end in `prompt-architect/SKILL.md`, not two nested `prompt-architect` folders. If you downloaded GitHub's whole source archive instead, use `skills/prompt-architect/` inside it.
+Download `prompt-architect-v0.3.0.zip` from the release linked above and unzip it. Copy the entire `prompt-architect/` folder, including `references/` and `LICENSE`, into your agent's skill directory. The final path must end in `prompt-architect/SKILL.md`, not two nested `prompt-architect` folders. If you downloaded GitHub's whole source archive instead, use `skills/prompt-architect/` inside it.
 
 Choose the destination from the [installation table](../../skills/prompt-architect/README.md#install), which separates documented locations from the path actually tested. Check that your host lists the skill; refresh or restart it if needed. If it is still absent, check the folder location rather than copying it into several locations.
 
@@ -61,7 +61,7 @@ Replace the meeting task and ChatGPT with your purpose and target platform. Give
 
 ### 1. 下載與載入
 
-從上方 Release 下載 `prompt-architect-v0.2.0.zip` 並解壓。把整個 `prompt-architect/` 資料夾放進 agent 的技能目錄，保留 `references/` 與 `LICENSE`。最後應是 `prompt-architect/SKILL.md`，不要多包一層同名資料夾。若下載 GitHub 全 repo 的原始碼壓縮檔，使用裡面的 `skills/prompt-architect/`。
+從上方 Release 下載 `prompt-architect-v0.3.0.zip` 並解壓。把整個 `prompt-architect/` 資料夾放進 agent 的技能目錄，保留 `references/` 與 `LICENSE`。最後應是 `prompt-architect/SKILL.md`，不要多包一層同名資料夾。若下載 GitHub 全 repo 的原始碼壓縮檔，使用裡面的 `skills/prompt-architect/`。
 
 按 [安裝說明](../../skills/prompt-architect/README.md#install)選擇宿主路徑；文件分開標示官方列出的路徑與本次實際測過的路徑。確認技能清單出現它，必要時重新整理或重啟宿主。仍未出現時先查路徑，避免同時複製到多個地方。
 

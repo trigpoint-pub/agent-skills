@@ -1,6 +1,6 @@
 # Classify an AI incident before you fix it
 
-> Snapshot of article version 1.0 at <https://trigpoint.pub/methods/classify-an-incident>, written for classify-ai-incident v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
+> Snapshot of article version 1.1 at <https://trigpoint.pub/methods/classify-an-incident>, written for classify-ai-incident v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
 
 When an automated step goes wrong, the first reflex is to blame the person who was supposed to catch it. Parasuraman and Riley (1997) set out four categories that replace “was the person or the machine more reliable?” with “was the reliance appropriate?”. They are four independent ways the relationship between people and automation can go wrong. They carry no ranking, and misuse and disuse each have their own causes. One of them, abuse, turns the question back on whoever designed, configured or required the automation.
 
@@ -44,7 +44,7 @@ An answer that points to abuse counts only if this incident turned on it: the mi
 | Abuse | Redesign the allocation: stage, level, thresholds, takeover path (see `allocate-ai-work`); return the level switch to a person |
 | Use | Fix the automation's own defect; reliance can stay as it is |
 
-“Remind people to be careful” or “train them to pay attention” is never the fix on its own. Fixing the mechanism rather than the person is our studio's repair pattern; the research basis is that abuse places the cause upstream, and that attention-based failures persist with practice and are not reliably removed by instructions to verify (Parasuraman and Manzey 2010; the latter point is contested).
+“Remind people to be careful” or “train them to pay attention” is never the fix on its own. Fixing the mechanism rather than the person follows the system approach described by Reason (2000); making it a fixed repair step in a use, misuse, disuse and abuse incident record is Trigpoint's (2026). The research basis is that abuse places the cause upstream, and that attention-based failures persist with practice and are not reliably removed by instructions to verify (Parasuraman and Manzey 2010; the latter point is contested).
 
 ## Corrections we built in
 
@@ -83,5 +83,6 @@ The skill, its research index and the practice incidents are on GitHub: [github.
 1. Parasuraman and Riley (1997) on use, misuse, disuse and abuse.
 2. Miller and Parasuraman (2007) on adaptable versus adaptive automation.
 3. Parasuraman and Manzey (2010) on complacency and bias.
+4. Reason (2000) on the person approach and the system approach.
 
 Full references and how they were checked are in [`docs/classify-ai-incident/SOURCES.md`](SOURCES.md) on GitHub.
