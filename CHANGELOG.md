@@ -102,6 +102,8 @@ First public release, experimental. Tested on Codex on macOS; see `docs/red-team
 
 Standardized the display name and documentation titles as **GitHub Agent Resource Review**. Author and maintainer attribution remains Ansel. The `inspect-github-agent-resources` identifier, folder path, invocation and behavior are unchanged.
 
+Attribution: the skill README's "Sources and attribution" section now names the working choices that are Trigpoint's (2026): the procedure as a whole, the four evidence labels, the order of the four dispositions, the starting scope budget, and re-reviewing only the conclusions a version change affects. It lists earlier forms of the underlying ideas from a prior-art check in November 2026; none is claimed as new. The new `docs/inspect-github-agent-resources/SOURCES.md` gives the full references and how they were checked. The skill's instructions, helpers and behavior are unchanged, and the `inspect-github-agent-resources-v0.1.0` release is unchanged.
+
 ### 0.1.0, tag `inspect-github-agent-resources-v0.1.0`, 2026-10-24
 
 Moved from anselbuilds/inspect-github-agent-resources, release v0.1.0 (commit 2d43edf0). The content is the same as that release, except that the links for reporting issues and security problems now point to this repository, because the old repository is archived.

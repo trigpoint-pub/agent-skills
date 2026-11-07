@@ -62,6 +62,19 @@ The compare helper supports a manual maintenance workflow. It does not schedule 
 
 ## Sources and attribution
 
+The procedure as a whole, and within it the split into four evidence labels, the fixed order of the four dispositions, the starting scope budget, and sending back for review only the conclusions that a version change affects, are working choices from Trigpoint (2026). The underlying ideas all have earlier forms, so none of them is claimed as new:
+
+- Treating text in the reviewed repository as evidence, not instructions: Greshake et al. (2023); OWASP (2025) LLM01.
+- Marking directly sourced information apart from inference: ODNI (2015) ICD 203.
+- Dispositions and the evidence record: the result kinds and run object of SARIF 2.1.0, OASIS (2020).
+- Four kinds of surface read before install: Mercer (2026), on Aident.
+- Useful and installable answered separately: SkillPortrait from SkillAudit (2026).
+- A static inventory that needs no external service: the skill-scanner static analyzer from Cisco AI Defense (2026).
+- Comparing versions: baseline states in SARIF 2.1.0, and Trail of Bits differential-review (2026), described below.
+- The acceptance package: the authorization package in NIST (2018) SP 800-37.
+
+Apart from the Trail of Bits comparison, the repository records no use of these works while the skill was written. A prior-art check in November 2026 lists them as earlier forms of the same ideas, not as sources the skill was built from. Full references and how they were checked: [SOURCES.md](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/inspect-github-agent-resources/SOURCES.md).
+
 The optional differential-review comparison used [Trail of Bits differential-review](https://github.com/trailofbits/skills/tree/442fc9d6c89b1e937e6f7a477e7071ea75fcbea4/plugins/differential-review/skills/differential-review) at that fixed revision. Its [repository license](https://github.com/trailofbits/skills/blob/442fc9d6c89b1e937e6f7a477e7071ea75fcbea4/LICENSE) is CC BY-SA 4.0. Those upstream guides are not bundled here, and the reference does not imply endorsement. This package makes no comparative accuracy or human-time-saving claim.
 
 ## Contributing and reporting problems
