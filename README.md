@@ -40,6 +40,8 @@ The versions below are published prereleases. Documentation and packaging change
 
 ## Install
 
+The shortest way is to paste the install prompt from the top of the skill README's Install section into your agent. It names the release tag, copies only the skill folder and tells the agent not to run anything from the repository. To install by hand:
+
 1. Choose the skill and open its release above. If it has a named skill ZIP, use that; GitHub's **Source code** archives contain the whole collection at that tag.
 2. Extract it and copy only the complete `{skill-name}/` folder (or `skills/{skill-name}/` from a source archive). Keep its references, scripts, examples and `LICENSE`. Older source archives may keep MIT only at the repository root: copy that `LICENSE` into the skill folder before installing.
 3. Follow the host locations in that skill's README. The destination must end in `{skill-name}/SKILL.md`, without a doubled folder. Preserve an existing installation and compare versions before replacing it.

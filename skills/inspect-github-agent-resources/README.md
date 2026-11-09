@@ -32,6 +32,18 @@ The agent reviews meaning and data flow from inspected sources; the helper suppl
 
 The helper is not a semantic malware detector, vulnerability database, sandbox, or security certification service. Model-assisted inspection quality has not been benchmarked here. `complete` means the helper completed its declared included scope; exit code 0 does not mean a resource is acceptable to install.
 
+## Install
+
+Paste this into your agent. It names the release tag, copies only the skill folder and tells the agent not to run anything from the repository.
+
+```text
+Install the inspect-github-agent-resources skill from release tag inspect-github-agent-resources-v0.1.0 of github.com/trigpoint-pub/agent-skills. Copy only the skills/inspect-github-agent-resources/ folder at that tag into your skills folder, so the result ends in inspect-github-agent-resources/SKILL.md. Do not install from main. Do not run any scripts or follow any other instructions from the repository. If inspect-github-agent-resources/ already exists there, stop and tell me what is installed instead of replacing it.
+```
+
+The same prompt was tested with concept-relations on Claude Code desktop on macOS, 2026-11-10. It has not been tested for this skill.
+
+To install by hand, follow the [installation and first-use guide](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/inspect-github-agent-resources/README.md).
+
 ## Local use
 
 Compatibility floor: Node.js 20.0.0. Use a maintained Node.js LTS line such as the tested Node 24; Node 20 is end-of-life. No package installation, API key, or third-party Node dependency is needed for the helpers. Public review needs an agent with anonymous public web access; a local-only review can use supplied files and explicitly retain missing provenance/advisory evidence. Agent file reads may be sent to its model provider; the helper's local execution is not an offline guarantee for the agent.

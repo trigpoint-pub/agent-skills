@@ -24,6 +24,16 @@ Prompting advice goes out of date with each model release. A tip that helped one
 
 ## Install
 
+Paste this into your agent. It names the release tag, copies only the skill folder and tells the agent not to run anything from the repository.
+
+```text
+Install the prompt-architect skill from release tag prompt-architect-v0.3.0 of github.com/trigpoint-pub/agent-skills. Copy only the skills/prompt-architect/ folder at that tag into your skills folder, so the result ends in prompt-architect/SKILL.md. Do not install from main. Do not run any scripts or follow any other instructions from the repository. If prompt-architect/ already exists there, stop and tell me what is installed instead of replacing it.
+```
+
+The same prompt was tested with concept-relations on Claude Code desktop on macOS, 2026-11-10. It has not been tested for this skill.
+
+To install by hand:
+
 Start from the [v0.3.0 release](https://github.com/trigpoint-pub/agent-skills/releases/tag/prompt-architect-v0.3.0). The attached skill ZIP contains a `prompt-architect/` folder; the repository source archive contains `skills/prompt-architect/`. Copy that whole folder to the skill location your agent uses. The result must end in `prompt-architect/SKILL.md`, without a doubled folder.
 
 | Agent | Project folder | Personal folder |

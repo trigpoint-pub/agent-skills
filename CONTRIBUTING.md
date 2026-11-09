@@ -24,7 +24,7 @@ The GitHub Actions workflow runs these helpers on macOS and Ubuntu, using Python
 
 ## Next release of a skill
 
-Each skill versions independently as `{skill}-v{version}`. Keep the published version, prerelease status and tested scope consistent across the skill README, collection table, changelog and release notes. Record documentation/packaging changes on `main` as unreleased until included in a new version; preserve old tags and published assets.
+Each skill versions independently as `{skill}-v{version}`. Keep the published version, prerelease status and tested scope consistent across the skill README, collection table, changelog and release notes. Record documentation/packaging changes on `main` as unreleased until included in a new version; preserve old tags and published assets. In the same change, update the release tag in the install prompt at the top of the skill README's Install section, and drop its LICENSE clause once the tagged skill folder contains `LICENSE`.
 
 Build the next skill ZIP from a recorded commit. It should extract to one `{skill-name}/` folder containing its MIT license and runtime references. Exclude repository-only answer keys, `docs/`, personal data and runtime databases. Attach `{skill}-v{version}.zip` and `SHA256SUMS.txt`; the automatically generated source archives contain the whole collection.
 

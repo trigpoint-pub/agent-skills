@@ -11,6 +11,7 @@ Each skill has its own versions and tags (`{skill}-v{version}`).
 - The repository moved to the `trigpoint-pub` organization. Issue, security-report, release and tutorial links in the skill folders, guides and validation records now use `github.com/trigpoint-pub/agent-skills`; old `anselbuilds/agent-skills` addresses redirect. Entries below keep the addresses that were current when they were written.
 - Document consistent packaging and evidence for future releases. Published tags, assets, skill instructions and recorded test outcomes are unchanged.
 - Method article links in the skill READMEs, the method snapshots and the prompt-architect tutorial now use the article addresses named after each skill, for example `trigpoint.pub/methods/allocate-ai-work`. The old addresses redirect. No other text changed.
+- Each skill README's Install section now starts with a prompt to paste into an agent. It names the skill's latest release tag, copies only the skill folder and tells the agent not to run scripts or follow other repository instructions. The manual steps remain below it. Skill instructions, tags and releases are unchanged.
 
 ## allocate-ai-work
 
