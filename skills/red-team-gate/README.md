@@ -5,7 +5,7 @@ AI assistants sometimes agree with users at the expense of correctness. Anthropi
 Red-Team Gate takes one claim, its support, and its intended use. It builds the strongest version, then gives it to a reviewer working in a fresh context to attempt a refutation. The report returns a verdict, the strongest attack, its evidence and reasoning, and what remains unknown. If the claim holds only under narrower conditions, it states that version. The decision stays with you.
 
 > Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: [MIT](LICENSE)
-> Method article: [English](https://trigpoint.pub/methods/red-team-a-claim) · [繁體中文](https://trigpoint.pub/zh-Hant/methods/red-team-a-claim)
+> Method article: [English](https://trigpoint.pub/methods/red-team-gate) · [繁體中文](https://trigpoint.pub/zh-Hant/methods/red-team-gate)
 
 [Try one practice claim](#try-it-without-installing) · [Read a report](#read-a-report) · [Review the test limits](#how-well-does-it-work)
 

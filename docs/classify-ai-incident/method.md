@@ -1,6 +1,6 @@
 # Classify an AI incident before you fix it
 
-> Snapshot of article version 1.1 at <https://trigpoint.pub/methods/classify-an-incident>, written for classify-ai-incident v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
+> Snapshot of article version 1.1 at <https://trigpoint.pub/methods/classify-ai-incident>, written for classify-ai-incident v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
 
 When an automated step goes wrong, the first reflex is to blame the person who was supposed to catch it. Parasuraman and Riley (1997) set out four categories that replace “was the person or the machine more reliable?” with “was the reliance appropriate?”. They are four independent ways the relationship between people and automation can go wrong. They carry no ranking, and misuse and disuse each have their own causes. One of them, abuse, turns the question back on whoever designed, configured or required the automation.
 

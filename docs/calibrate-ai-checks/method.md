@@ -1,6 +1,6 @@
 # Calibrate how often you check AI output
 
-> Snapshot of article version 1.1 at <https://trigpoint.pub/methods/calibrate-a-check>, written for calibrate-ai-checks v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
+> Snapshot of article version 1.1 at <https://trigpoint.pub/methods/calibrate-ai-checks>, written for calibrate-ai-checks v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
 
 When an AI step has been reliable for a while, people check it less and less, until an error nobody was looking for gets through. The opposite is just as common: a step that produced too many bad outputs or false alarms early on stops being trusted, even after it improves. The two failures pull in opposite directions and have separate causes (Parasuraman and Riley 1997). So the aim is neither more trust nor less: trust should match the step's real reliability, and should tell the situations where it is reliable from those where it is not (calibration and resolution, in Lee and See 2004).
 

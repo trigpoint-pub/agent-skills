@@ -10,6 +10,7 @@ Each skill has its own versions and tags (`{skill}-v{version}`).
 - Integrate the existing helper-test workflow and one shared Issue form. The migrated per-repo templates remain historical records.
 - The repository moved to the `trigpoint-pub` organization. Issue, security-report, release and tutorial links in the skill folders, guides and validation records now use `github.com/trigpoint-pub/agent-skills`; old `anselbuilds/agent-skills` addresses redirect. Entries below keep the addresses that were current when they were written.
 - Document consistent packaging and evidence for future releases. Published tags, assets, skill instructions and recorded test outcomes are unchanged.
+- Method article links in the skill READMEs, the method snapshots and the prompt-architect tutorial now use the article addresses named after each skill, for example `trigpoint.pub/methods/allocate-ai-work`. The old addresses redirect. No other text changed.
 
 ## allocate-ai-work
 

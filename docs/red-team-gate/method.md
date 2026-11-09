@@ -1,6 +1,6 @@
 # Red-team a claim before you build on it
 
-> Snapshot of article version 1.0 at <https://trigpoint.pub/methods/red-team-a-claim>, written for red-team-gate v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
+> Snapshot of article version 1.0 at <https://trigpoint.pub/methods/red-team-gate>, written for red-team-gate v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
 
 Most of the claims people act on have been checked by the people who wanted them to be true. That is not dishonest. It is how checking usually happens: whoever writes a claim also looks for problems with it, in the same sitting, with the same assumptions. The search tends to find support.
 

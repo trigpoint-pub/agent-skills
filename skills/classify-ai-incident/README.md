@@ -5,7 +5,7 @@ An agent skill that classifies one incident involving AI or other automation as 
 The four categories come from Parasuraman and Riley (1997). The skill restates the incident as facts, compares how much people relied on the automation with how reliable it actually was, always asks separately whether the setup itself ignored the people who had to work with it, and returns a short record with the label, its evidence, and the direction of the fix.
 
 > Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: [MIT](LICENSE)
-> Method article: [Classify an AI incident before you fix it](https://trigpoint.pub/methods/classify-an-incident) (a full-text snapshot is in [`docs/classify-ai-incident/method.md`](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/classify-ai-incident/method.md), licensed CC BY 4.0)
+> Method article: [Classify an AI incident before you fix it](https://trigpoint.pub/methods/classify-ai-incident) (a full-text snapshot is in [`docs/classify-ai-incident/method.md`](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/classify-ai-incident/method.md), licensed CC BY 4.0)
 
 Part of a set of three: [`allocate-ai-work`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/allocate-ai-work) (before handover), [`calibrate-ai-checks`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/calibrate-ai-checks) (while it runs), `classify-ai-incident` (after something goes wrong). Each installs on its own.
 

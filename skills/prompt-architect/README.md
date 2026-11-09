@@ -5,7 +5,7 @@ An agent skill that writes a ready-to-paste prompt for a stated purpose on a sta
 It works in two layers. First it builds the task method: what kind of task this is, how it breaks down into sub-tasks and decisions, success criteria someone could check, and the fields of the answer. Then it reads the platform vendor's current official prompting documentation and writes the method in that platform's conventions. The usage notes cite the pages it read.
 
 > Version: 0.3.0 · Status: experimental prerelease · Maintainer: Ansel · License: [MIT](LICENSE)
-> [First-use tutorial / 最短教學](https://github.com/trigpoint-pub/agent-skills/blob/prompt-architect-v0.3.0/docs/prompt-architect/FIRST-USE.md) · Method article: [English](https://trigpoint.pub/methods/architect-a-prompt) · [繁體中文](https://trigpoint.pub/zh-Hant/methods/architect-a-prompt)
+> [First-use tutorial / 最短教學](https://github.com/trigpoint-pub/agent-skills/blob/prompt-architect-v0.3.0/docs/prompt-architect/FIRST-USE.md) · Method article: [English](https://trigpoint.pub/methods/prompt-architect) · [繁體中文](https://trigpoint.pub/zh-Hant/methods/prompt-architect)
 
 ## Why it reads the vendor's pages every time
 

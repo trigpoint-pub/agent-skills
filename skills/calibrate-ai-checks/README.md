@@ -5,7 +5,7 @@ An agent skill that sets how often, and how, a person checks the output of an AI
 It separates machine checks (run on every item) from human judgment checks (taken as a random sample), sets a starting rate from the step's track record and what an undetected error costs, states what a clean record does and does not prove, keeps the rate from sliding to zero, and keeps a miss log so that a missed error changes the check, not just the mood.
 
 > Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: [MIT](LICENSE)
-> Method article: [Calibrate how often you check AI output](https://trigpoint.pub/methods/calibrate-a-check) (a full-text snapshot is in [`docs/calibrate-ai-checks/method.md`](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/calibrate-ai-checks/method.md), licensed CC BY 4.0)
+> Method article: [Calibrate how often you check AI output](https://trigpoint.pub/methods/calibrate-ai-checks) (a full-text snapshot is in [`docs/calibrate-ai-checks/method.md`](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/calibrate-ai-checks/method.md), licensed CC BY 4.0)
 
 Part of a set of three: [`allocate-ai-work`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/allocate-ai-work) (before handover), `calibrate-ai-checks` (while it runs), [`classify-ai-incident`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/classify-ai-incident) (after something goes wrong). Each installs on its own.
 

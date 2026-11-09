@@ -1,6 +1,6 @@
 # Allocate a workflow before you hand it to AI
 
-> Snapshot of article version 1.1 at <https://trigpoint.pub/methods/allocate-a-workflow>, written for allocate-ai-work v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
+> Snapshot of article version 1.1 at <https://trigpoint.pub/methods/allocate-ai-work>, written for allocate-ai-work v0.1.x. The web page is the canonical version; corrections appear there first. Text by Ansel, licensed CC BY 4.0 (see [`LICENSE-CONTENT`](../../LICENSE-CONTENT)).
 
 “Should we hand this to AI?” treats automation as a single switch. A workflow usually gathers information, analyses it, decides and acts, and each of those stages can be handed over to a different degree. Handing over more is a trade rather than an upgrade: once a stage is handed over, the work left to the person changes, and so does their ability to take over when it fails.
 
@@ -86,8 +86,8 @@ A ledger's levels go stale once set; when any of the following happens, write a 
 - A new workflow is handed to AI: write a separate ledger for it; each ledger holds only for the workflow and error costs it lists.
 - The review date on the ledger arrives.
 - Something changes in the workflow, the tools it uses or what an error costs.
-- An incident happens: classify it first, following [Classify an AI incident before you fix it](https://trigpoint.pub/methods/classify-an-incident). If it is misuse, the fix includes considering a lower level for that stage; if it is abuse, the fix is to redesign the allocation. Both lead back to the ledger.
-- The same kind of miss repeats in the miss log: following [Calibrate how often you check AI output](https://trigpoint.pub/methods/calibrate-a-check), this is when to review the step's level.
+- An incident happens: classify it first, following [Classify an AI incident before you fix it](https://trigpoint.pub/methods/classify-ai-incident). If it is misuse, the fix includes considering a lower level for that stage; if it is abuse, the fix is to redesign the allocation. Both lead back to the ledger.
+- The same kind of miss repeats in the miss log: following [Calibrate how often you check AI output](https://trigpoint.pub/methods/calibrate-ai-checks), this is when to review the step's level.
 
 ## Get the skill
 

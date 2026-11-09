@@ -5,7 +5,7 @@ An agent skill that builds an allocation ledger for one workflow: for each step 
 It splits each step into four stages (gather, analyse, decide, act), sets a level for each stage from two questions (can an error here be undone? does it travel on before anyone notices?), and asks what work the person still has once the stage is handed over. Every row cites its basis in the human-automation research literature, with a verification status and a link. The ledger is a proposal; the workflow's owner decides.
 
 > Version 0.1.0, experimental prerelease · Maintainer: Ansel · License: [MIT](LICENSE)
-> Method article: [Allocate a workflow before you hand it to AI](https://trigpoint.pub/methods/allocate-a-workflow) (a full-text snapshot is in [`docs/allocate-ai-work/method.md`](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/allocate-ai-work/method.md), licensed CC BY 4.0)
+> Method article: [Allocate a workflow before you hand it to AI](https://trigpoint.pub/methods/allocate-ai-work) (a full-text snapshot is in [`docs/allocate-ai-work/method.md`](https://github.com/trigpoint-pub/agent-skills/blob/main/docs/allocate-ai-work/method.md), licensed CC BY 4.0)
 
 Part of a set of three: `allocate-ai-work` (before handover), [`calibrate-ai-checks`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/calibrate-ai-checks) (while it runs), [`classify-ai-incident`](https://github.com/trigpoint-pub/agent-skills/tree/main/skills/classify-ai-incident) (after something goes wrong). Each installs on its own.
 
