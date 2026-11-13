@@ -55,6 +55,12 @@ First public release, experimental. See `docs/classify-ai-incident/VALIDATION.md
 
 ## prompt-architect
 
+### Unreleased
+
+- Added a snapshot of the method article, [`docs/prompt-architect/method.md`](docs/prompt-architect/method.md) (text CC BY 4.0, see [`LICENSE-CONTENT`](LICENSE-CONTENT)), linked from the first-use tutorial.
+- Validation record: the refused-fetch case now states that its first tool was specified, and "Not yet tested" again lists a refused fetch when the agent chooses its own first tool. No test result changed.
+- The skill's instructions and the `prompt-architect-v0.3.0` release are unchanged.
+
 ### 0.3.0, tag `prompt-architect-v0.3.0`, 2026-11-07
 
 - Step 2 is now "Break down the task": it writes down the task's sub-tasks, the decisions they call for and what each decision rests on, instead of a sequence of reasoning steps. Whether the prompt should ask the model to reason step by step or check its own work moves to Step 5, where it is answered from the vendor's pages for the target model. The description, Step 6 rule 3 and the README say the same.
@@ -62,7 +68,7 @@ First public release, experimental. See `docs/classify-ai-incident/VALIDATION.md
 - Validation: check 1 now asks for a real breakdown of the task; an instruction to reason step by step or to self-check is judged under check 6. The 0.3.0 acceptance run (section 2c) ran R1 to R6 and N1 to N3 on Claude Code with the skill path given; eight passed, and R2 failed check 6 on a usage note that came from the test host's own notes.
 - The README, the first-use tutorial and the collection README point to the 0.3.0 release.
 
-### 0.2.0, 2026-11-01
+### 0.2.0, tag `prompt-architect-v0.2.0`, 2026-11-01
 
 - The source list is split into one file per vendor (`references/openai.md`, `references/anthropic.md`, `references/google.md`). `references/official-sources.md` now says which file to open, and Step 5 opens only the target vendor's file. Each vendor file pairs the points Step 5 asks for with the page to check first. The skill still ships no vendor conventions.
 - Source list: the Claude "Adaptive thinking" entry now uses the page's current title and address, "Steering thinking"; the old address already redirected there. All 28 links rechecked on 2026-11-01.
@@ -105,6 +111,8 @@ First public release, experimental. Tested on Codex on macOS; see `docs/red-team
 Standardized the display name and documentation titles as **GitHub Agent Resource Review**. Author and maintainer attribution remains Ansel. The `inspect-github-agent-resources` identifier, folder path, invocation and behavior are unchanged.
 
 Attribution: the skill README's "Sources and attribution" section now names the working choices that are Trigpoint's (2026): the procedure as a whole, the four evidence labels, the order of the four dispositions, the starting scope budget, and re-reviewing only the conclusions a version change affects. It lists earlier forms of the underlying ideas from a prior-art check in November 2026; none is claimed as new. The new `docs/inspect-github-agent-resources/SOURCES.md` gives the full references and how they were checked. The skill's instructions, helpers and behavior are unchanged, and the `inspect-github-agent-resources-v0.1.0` release is unchanged.
+
+Added a snapshot of the method article, [`docs/inspect-github-agent-resources/method.md`](docs/inspect-github-agent-resources/method.md) (text CC BY 4.0, see [`LICENSE-CONTENT`](LICENSE-CONTENT)). No other file changed for it.
 
 ### 0.1.0, tag `inspect-github-agent-resources-v0.1.0`, 2026-10-24
 

@@ -102,6 +102,6 @@ Replace the meeting task and ChatGPT with your purpose and target platform. Give
 
 ## Relationship to Trigpoint / 與 Trigpoint 的關係
 
-This tutorial is included in the skill release. The method behind the skill is explained in a [Trigpoint article](https://trigpoint.pub/methods/prompt-architect). The [Trigpoint notebook page](https://trigpoint.pub/notebooks) also lists a separate NotebookLM tool called Platform-Aware Prompt Architect. Its version number and access route do not identify this skill.
+This tutorial is included in the skill release. The method behind the skill is explained in a [Trigpoint article](https://trigpoint.pub/methods/prompt-architect); a snapshot of the article is kept here as [method.md](method.md). The [Trigpoint notebook page](https://trigpoint.pub/notebooks) also lists a separate NotebookLM tool called Platform-Aware Prompt Architect. Its version number and access route do not identify this skill.
 
-本教學與 skill 同步發布。本 skill 的方法見 [Trigpoint 文章](https://trigpoint.pub/zh-Hant/methods/prompt-architect)。[Trigpoint 筆記本頁](https://trigpoint.pub/zh-Hant/notebooks)另有 NotebookLM「全動態提示詞引擎」；它的版本號與入口不代表此 skill。
+本教學與 skill 同步發布。本 skill 的方法見 [Trigpoint 文章](https://trigpoint.pub/zh-Hant/methods/prompt-architect)，英文快照存於 [method.md](method.md)。[Trigpoint 筆記本頁](https://trigpoint.pub/zh-Hant/notebooks)另有 NotebookLM「全動態提示詞引擎」；它的版本號與入口不代表此 skill。

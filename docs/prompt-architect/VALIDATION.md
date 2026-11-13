@@ -67,7 +67,7 @@ At this stage, R2, R3 and R6 had not been re-run on this host and the link check
 - Host: Codex desktop on macOS 27.0.1, arm64. Three installed files matched the revised candidate byte-for-byte at `~/.codex/skills/prompt-architect/`.
 - Four fresh sub-agents had no earlier conversation, answer keys or other runs' outputs. Each saw the skill in its initial list and read its installed instructions and source list. They still inherited host instructions. All used GPT-6 Astra at high effort; the coordinator scored the outputs, not blind.
 - R2, R3 and R6 passed every applicable check. R6 had no vendor guidance, so vendor-specific checks were not applicable; its tool record showed no web call.
-- A fourth run used a naturally refused page: the OpenAI model-release-notes URL returned HTTP 403 to the first plain HTTP fetch, then the agent read the same page with a web reader. It distinguished a refused fetch from a missing page, changed tools and recorded the URL it read. This was not a fabricated error or an edited link.
+- A fourth run used a naturally refused page: the OpenAI model-release-notes URL returned HTTP 403 to the first plain HTTP fetch, then the agent read the same page with a web reader. It distinguished a refused fetch from a missing page, changed tools and recorded the URL it read. This was not a fabricated error or an edited link. The first tool was specified (a plain curl request), so this does not show that an agent choosing its own first tool would meet the same refusal.
 - All 28 source-list URLs were checked: 27 returned HTTP 200 after redirects; one returned 403 to the HTTP client and was readable with the other tool. The full-list check was performed by the coordinator; it does not mean every sub-agent read all 28 pages.
 - One non-blocking wording observation remains: an API model's documented effort default is not evidence of the setting currently selected in the Codex interface. Any example using that output must identify the API scope or keep the product setting unspecified.
 
@@ -153,6 +153,7 @@ A result passes only if every applicable check holds.
 - Installation and discovery on hosts other than Codex on macOS (Claude Code was run with the skill path given, not installed), and Gemini as a host. For 0.3.0, installation was not tested on any host.
 - Generated prompts run on their target platforms, and the quality of their results on real contracts, books, tickets, or documents.
 - Working without web access, and a broken link with no reachable replacement.
+- A refused fetch when the agent chooses its own first tool. The refused case was run once, with the first tool specified; the missing page was run once, with an edited link.
 - Vendor pages that contradict each other, or page content written to mislead the agent.
 - Repeated runs of the same request.
 - Model-specific guidance when only a product is named. In the 0.2.0 runs the skill then answered "model unknown" (R1 and R4, at medium and high effort) and used only guidance that does not depend on the model. Name the model to get model-specific guidance. In the 0.3.0 run, R1 and R4 named an assumed model with a cited reason instead.
